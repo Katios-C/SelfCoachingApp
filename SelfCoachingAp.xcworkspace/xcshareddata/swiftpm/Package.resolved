@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "iOSDevPackage",
+        "repositoryURL": "https://gitlab.issart.com/nbaklanov/iosdevpackage.git",
+        "state": {
+          "branch": null,
+          "revision": "566d1f3c947f1765cdb7ea2cdd06597ee5141d32",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
