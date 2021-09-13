@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ekaterinacernova/&#x418;&#x421;&#x421;&#x410;&#x420;&#x422;/&#x41f;&#x440;&#x43e;&#x435;&#x43a;&#x442; &#x434;&#x43b;&#x44f; &#x418;&#x41f;&#x420;/SelfCoachingApp/SelfCoachingAp/CoreData/Minutes+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ekaterinacernova/&#x418;&#x421;&#x421;&#x410;&#x420;&#x422;/&#x41f;&#x440;&#x43e;&#x435;&#x43a;&#x442; &#x434;&#x43b;&#x44f; &#x418;&#x41f;&#x420;/SelfCoachingApp/SelfCoachingAp/CoreData/Minutes+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:SelfCoachingAp.xcodeproj">
    </FileRef>
    <FileRef

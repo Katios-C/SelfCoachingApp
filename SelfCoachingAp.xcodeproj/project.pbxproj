@@ -7,50 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950EF30626E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 950EF30426E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld */; };
+		950EF30826E1F6CC0012B2CF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF30726E1F6CC0012B2CF /* PersistenceController.swift */; };
+		950EF30D26E2174E0012B2CF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950EF30C26E2174E0012B2CF /* RealmSwift */; };
+		950EF30F26E2174E0012B2CF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 950EF30E26E2174E0012B2CF /* Realm */; };
+		950EF31226E218E00012B2CF /* BreathDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31126E218E00012B2CF /* BreathDB.swift */; };
+		950EF31426E21B570012B2CF /* BreathStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31326E21B570012B2CF /* BreathStruct.swift */; };
+		950EF31626E21DAB0012B2CF /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31526E21DAB0012B2CF /* DBViewModel.swift */; };
+		950EF32026E605AB0012B2CF /* SavedMinutesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */; };
+		951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B326D78BC00092BA5B /* ImportentBusinessView.swift */; };
+		951084B626D78D6C0092BA5B /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B526D78D6C0092BA5B /* ScaleView.swift */; };
+		951084B826D78DA00092BA5B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B726D78DA00092BA5B /* SleepView.swift */; };
+		951084BA26D78DCA0092BA5B /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B926D78DCA0092BA5B /* StatisticView.swift */; };
+		951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */; };
+		951084BE26D790220092BA5B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BD26D790220092BA5B /* GoalsView.swift */; };
+		951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */; };
+		951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */; };
+		951084C726D7A8B90092BA5B /* BreathCaruselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084C626D7A8B90092BA5B /* BreathCaruselView.swift */; };
+		951084C926D87C270092BA5B /* StillBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084C826D87C270092BA5B /* StillBreathView.swift */; };
+		951084CB26D885850092BA5B /* ConcentrateBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084CA26D885850092BA5B /* ConcentrateBreathView.swift */; };
+		951084CD26D88AD80092BA5B /* BreathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084CC26D88AD80092BA5B /* BreathViewModel.swift */; };
+		951084CF26D88F780092BA5B /* BreathStartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084CE26D88F780092BA5B /* BreathStartPageView.swift */; };
+		951084D126D8A1930092BA5B /* EnergyBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084D026D8A1930092BA5B /* EnergyBreathView.swift */; };
+		951084DF26D9315E0092BA5B /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084DE26D9315E0092BA5B /* Resolver.swift */; };
+		951084E126DC9C320092BA5B /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E026DC9C320092BA5B /* DependencyManager.swift */; };
+		951084E426DCCD550092BA5B /* StillExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E326DCCD550092BA5B /* StillExView.swift */; };
+		951084E626DCCDD40092BA5B /* ConcentrateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E526DCCDD40092BA5B /* ConcentrateEx.swift */; };
+		951084E826DCE95A0092BA5B /* ProgressTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E726DCE95A0092BA5B /* ProgressTimer.swift */; };
+		951084EA26DCEC560092BA5B /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E926DCEC560092BA5B /* ProgressBar.swift */; };
+		951084EC26DCFCEF0092BA5B /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084EB26DCFCEF0092BA5B /* ProgressCircle.swift */; };
+		951084EE26DDCF530092BA5B /* FlowerBrathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084ED26DDCF530092BA5B /* FlowerBrathView.swift */; };
+		951084F026DDDF160092BA5B /* Flower2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084EF26DDDF160092BA5B /* Flower2.swift */; };
+		951084F226DDDF970092BA5B /* Flower2Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084F126DDDF970092BA5B /* Flower2Content.swift */; };
+		951084F426DDE4160092BA5B /* BRCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084F326DDE4160092BA5B /* BRCircle.swift */; };
+		951084F626DDF69F0092BA5B /* StillCircleBreath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084F526DDF69F0092BA5B /* StillCircleBreath.swift */; };
+		951084F926DF0CEA0092BA5B /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084F826DF0CEA0092BA5B /* TimerViewModel.swift */; };
+		951084FB26DF8DF70092BA5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084FA26DF8DF70092BA5B /* TimerView.swift */; };
 		951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */; };
 		951A1F0026D38669004A5F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFF26D38669004A5F46 /* ContentView.swift */; };
 		951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0126D3866B004A5F46 /* Assets.xcassets */; };
 		951A1F0526D3866B004A5F46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0426D3866B004A5F46 /* Preview Assets.xcassets */; };
-		951A1F0D26D387B5004A5F46 /* MainEmptyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F0C26D387B5004A5F46 /* MainEmptyPage.swift */; };
 		951A1F0F26D39424004A5F46 /* BreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F0E26D39424004A5F46 /* BreathView.swift */; };
-		951A1F1126D39E3E004A5F46 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F1026D39E3E004A5F46 /* SectionView.swift */; };
-		951A1F1326D3B79C004A5F46 /* CaruselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F1226D3B79C004A5F46 /* CaruselView.swift */; };
-		951A1F1526D3BE91004A5F46 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F1426D3BE91004A5F46 /* PhotoView.swift */; };
 		951A1F1726D3C31B004A5F46 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F1626D3C31B004A5F46 /* ListView.swift */; };
 		951A1F1926D4A9D6004A5F46 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F1826D4A9D6004A5F46 /* RectangleView.swift */; };
-		951A1F4526D5036C004A5F46 /* BreathDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F4426D5036C004A5F46 /* BreathDetailView.swift */; };
+		951A1F4526D5036C004A5F46 /* QuestionOfDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F4426D5036C004A5F46 /* QuestionOfDayView.swift */; };
 		951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 951A1F4726D503C7004A5F46 /* iOSDevPackage */; };
 		951A1F4A26D5075D004A5F46 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F4926D5075D004A5F46 /* ServiceProvider.swift */; };
+		9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB8D26E9B1BC0026C5DE /* Button.swift */; };
+		9535FB9326EB46AA0026C5DE /* Duble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9226EB46AA0026C5DE /* Duble.swift */; };
+		9535FB9526EF18640026C5DE /* SavedMinutesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9426EF18640026C5DE /* SavedMinutesListViewModel.swift */; };
 		95B3097D26D61B9A00B672D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3097C26D61B9A00B672D4 /* AppDelegate.swift */; };
 		95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */; };
 		95B3098126D64E6E00B672D4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3098026D64E6E00B672D4 /* Login.swift */; };
 		95B3098326D658DF00B672D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3098226D658DF00B672D4 /* LoginViewModel.swift */; };
+		95BBCC1026E6337800A4A7B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCC0F26E6337800A4A7B8 /* SceneDelegate.swift */; };
+		95BBCC1226E635CA00A4A7B8 /* Minutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCC1126E635CA00A4A7B8 /* Minutes.swift */; };
+		95BBCC1426E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCC1326E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift */; };
+		95BBCC1626E637C000A4A7B8 /* Minutes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCC1526E637C000A4A7B8 /* Minutes+CoreDataClass.swift */; };
 		DE7BFDE20C48A830368667E7 /* Pods_SelfCoachingAp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A46E2EFD486F471729FD13F /* Pods_SelfCoachingAp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56ECA8241809E950E0967D0E /* Pods-SelfCoachingAp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfCoachingAp.release.xcconfig"; path = "Target Support Files/Pods-SelfCoachingAp/Pods-SelfCoachingAp.release.xcconfig"; sourceTree = "<group>"; };
 		5A46E2EFD486F471729FD13F /* Pods_SelfCoachingAp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelfCoachingAp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950EF30526E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModelBreath.xcdatamodel; sourceTree = "<group>"; };
+		950EF30726E1F6CC0012B2CF /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		950EF31126E218E00012B2CF /* BreathDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathDB.swift; sourceTree = "<group>"; };
+		950EF31326E21B570012B2CF /* BreathStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathStruct.swift; sourceTree = "<group>"; };
+		950EF31526E21DAB0012B2CF /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
+		950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMinutesList.swift; sourceTree = "<group>"; };
+		951084B326D78BC00092BA5B /* ImportentBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportentBusinessView.swift; sourceTree = "<group>"; };
+		951084B526D78D6C0092BA5B /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
+		951084B726D78DA00092BA5B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		951084B926D78DCA0092BA5B /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetalsView.swift; sourceTree = "<group>"; };
+		951084BD26D790220092BA5B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTemplateForDetalView.swift; sourceTree = "<group>"; };
+		951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotomTemplateDetalView.swift; sourceTree = "<group>"; };
+		951084C626D7A8B90092BA5B /* BreathCaruselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathCaruselView.swift; sourceTree = "<group>"; };
+		951084C826D87C270092BA5B /* StillBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillBreathView.swift; sourceTree = "<group>"; };
+		951084CA26D885850092BA5B /* ConcentrateBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateBreathView.swift; sourceTree = "<group>"; };
+		951084CC26D88AD80092BA5B /* BreathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewModel.swift; sourceTree = "<group>"; };
+		951084CE26D88F780092BA5B /* BreathStartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathStartPageView.swift; sourceTree = "<group>"; };
+		951084D026D8A1930092BA5B /* EnergyBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBreathView.swift; sourceTree = "<group>"; };
+		951084DE26D9315E0092BA5B /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		951084E026DC9C320092BA5B /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		951084E326DCCD550092BA5B /* StillExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillExView.swift; sourceTree = "<group>"; };
+		951084E526DCCDD40092BA5B /* ConcentrateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateEx.swift; sourceTree = "<group>"; };
+		951084E726DCE95A0092BA5B /* ProgressTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTimer.swift; sourceTree = "<group>"; };
+		951084E926DCEC560092BA5B /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		951084EB26DCFCEF0092BA5B /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
+		951084ED26DDCF530092BA5B /* FlowerBrathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerBrathView.swift; sourceTree = "<group>"; };
+		951084EF26DDDF160092BA5B /* Flower2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower2.swift; sourceTree = "<group>"; };
+		951084F126DDDF970092BA5B /* Flower2Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower2Content.swift; sourceTree = "<group>"; };
+		951084F326DDE4160092BA5B /* BRCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCircle.swift; sourceTree = "<group>"; };
+		951084F526DDF69F0092BA5B /* StillCircleBreath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillCircleBreath.swift; sourceTree = "<group>"; };
+		951084F826DF0CEA0092BA5B /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		951084FA26DF8DF70092BA5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfCoachingAp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCoachingApApp.swift; sourceTree = "<group>"; };
 		951A1EFF26D38669004A5F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		951A1F0126D3866B004A5F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951A1F0426D3866B004A5F46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		951A1F0626D3866B004A5F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		951A1F0C26D387B5004A5F46 /* MainEmptyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEmptyPage.swift; sourceTree = "<group>"; };
 		951A1F0E26D39424004A5F46 /* BreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathView.swift; sourceTree = "<group>"; };
-		951A1F1026D39E3E004A5F46 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
-		951A1F1226D3B79C004A5F46 /* CaruselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaruselView.swift; sourceTree = "<group>"; };
-		951A1F1426D3BE91004A5F46 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		951A1F1626D3C31B004A5F46 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		951A1F1826D4A9D6004A5F46 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
-		951A1F4426D5036C004A5F46 /* BreathDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathDetailView.swift; sourceTree = "<group>"; };
+		951A1F4426D5036C004A5F46 /* QuestionOfDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOfDayView.swift; sourceTree = "<group>"; };
 		951A1F4926D5075D004A5F46 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelfCoachingAp.entitlements; sourceTree = "<group>"; };
+		9535FB8D26E9B1BC0026C5DE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		9535FB9226EB46AA0026C5DE /* Duble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duble.swift; sourceTree = "<group>"; };
+		9535FB9426EF18640026C5DE /* SavedMinutesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMinutesListViewModel.swift; sourceTree = "<group>"; };
 		95B3097C26D61B9A00B672D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95B3098026D64E6E00B672D4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		95B3098226D658DF00B672D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		95BBCC0F26E6337800A4A7B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		95BBCC1126E635CA00A4A7B8 /* Minutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minutes.swift; sourceTree = "<group>"; };
+		95BBCC1326E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Minutes+CoreDataProperties.swift"; path = "/Users/ekaterinacernova/ИССАРТ/Проект для ИПР/SelfCoachingApp/SelfCoachingAp/CoreData/Minutes+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		95BBCC1526E637C000A4A7B8 /* Minutes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Minutes+CoreDataClass.swift"; path = "/Users/ekaterinacernova/ИССАРТ/Проект для ИПР/SelfCoachingApp/SelfCoachingAp/CoreData/Minutes+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		F98084DE9956B9AED8ADB5DD /* Pods-SelfCoachingAp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfCoachingAp.debug.xcconfig"; path = "Target Support Files/Pods-SelfCoachingAp/Pods-SelfCoachingAp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +135,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950EF30D26E2174E0012B2CF /* RealmSwift in Frameworks */,
 				951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */,
+				950EF30F26E2174E0012B2CF /* Realm in Frameworks */,
 				DE7BFDE20C48A830368667E7 /* Pods_SelfCoachingAp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +145,177 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950EF30226E1D3280012B2CF /*  to delete */ = {
+			isa = PBXGroup;
+			children = (
+				951084EF26DDDF160092BA5B /* Flower2.swift */,
+				951084ED26DDCF530092BA5B /* FlowerBrathView.swift */,
+				951084F126DDDF970092BA5B /* Flower2Content.swift */,
+			);
+			path = " to delete";
+			sourceTree = "<group>";
+		};
+		950EF30326E1DDDE0012B2CF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				95BBCC1326E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift */,
+				950EF30726E1F6CC0012B2CF /* PersistenceController.swift */,
+				9535FB9226EB46AA0026C5DE /* Duble.swift */,
+				950EF30426E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld */,
+				95BBCC1526E637C000A4A7B8 /* Minutes+CoreDataClass.swift */,
+				950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */,
+				9535FB9426EF18640026C5DE /* SavedMinutesListViewModel.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		950EF31026E218C40012B2CF /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				950EF31126E218E00012B2CF /* BreathDB.swift */,
+				950EF31326E21B570012B2CF /* BreathStruct.swift */,
+				950EF31526E21DAB0012B2CF /* DBViewModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		951084C526D7A1A70092BA5B /* Breath */ = {
+			isa = PBXGroup;
+			children = (
+				951084C626D7A8B90092BA5B /* BreathCaruselView.swift */,
+				951084E226DCCD3F0092BA5B /* BreathExercise */,
+				951084CA26D885850092BA5B /* ConcentrateBreathView.swift */,
+				951084D026D8A1930092BA5B /* EnergyBreathView.swift */,
+				951A1F0E26D39424004A5F46 /* BreathView.swift */,
+				951084CE26D88F780092BA5B /* BreathStartPageView.swift */,
+				951084CC26D88AD80092BA5B /* BreathViewModel.swift */,
+			);
+			path = Breath;
+			sourceTree = "<group>";
+		};
+		951084D226D8D0470092BA5B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				951A1F4926D5075D004A5F46 /* ServiceProvider.swift */,
+				951084DE26D9315E0092BA5B /* Resolver.swift */,
+				951084E026DC9C320092BA5B /* DependencyManager.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		951084D326D8D0A30092BA5B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				951A1EFF26D38669004A5F46 /* ContentView.swift */,
+				951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */,
+				95BBCC0F26E6337800A4A7B8 /* SceneDelegate.swift */,
+				95B3097C26D61B9A00B672D4 /* AppDelegate.swift */,
+				95BBCC1126E635CA00A4A7B8 /* Minutes.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		951084D426D8D1680092BA5B /* QuestionOfDay */ = {
+			isa = PBXGroup;
+			children = (
+				951A1F4426D5036C004A5F46 /* QuestionOfDayView.swift */,
+			);
+			path = QuestionOfDay;
+			sourceTree = "<group>";
+		};
+		951084D526D8D1960092BA5B /* ImportantBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				951084B326D78BC00092BA5B /* ImportentBusinessView.swift */,
+			);
+			path = ImportantBusiness;
+			sourceTree = "<group>";
+		};
+		951084D626D8D1B00092BA5B /* ScaleView */ = {
+			isa = PBXGroup;
+			children = (
+				951084B526D78D6C0092BA5B /* ScaleView.swift */,
+			);
+			path = ScaleView;
+			sourceTree = "<group>";
+		};
+		951084D726D8D1CB0092BA5B /* Sleeping */ = {
+			isa = PBXGroup;
+			children = (
+				951084B726D78DA00092BA5B /* SleepView.swift */,
+			);
+			path = Sleeping;
+			sourceTree = "<group>";
+		};
+		951084D826D8D1DC0092BA5B /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				951084B926D78DCA0092BA5B /* StatisticView.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		951084D926D8D1F20092BA5B /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				951084BD26D790220092BA5B /* GoalsView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		951084DA26D8D2380092BA5B /* PersonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */,
+			);
+			path = PersonDetails;
+			sourceTree = "<group>";
+		};
+		951084DB26D8D2E80092BA5B /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				951A1F1626D3C31B004A5F46 /* ListView.swift */,
+				951A1F1826D4A9D6004A5F46 /* RectangleView.swift */,
+			);
+			path = MainList;
+			sourceTree = "<group>";
+		};
+		951084DC26D8D3530092BA5B /* SingleViews */ = {
+			isa = PBXGroup;
+			children = (
+				951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */,
+				951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */,
+				9535FB8D26E9B1BC0026C5DE /* Button.swift */,
+			);
+			path = SingleViews;
+			sourceTree = "<group>";
+		};
+		951084E226DCCD3F0092BA5B /* BreathExercise */ = {
+			isa = PBXGroup;
+			children = (
+				950EF30226E1D3280012B2CF /*  to delete */,
+				951084F326DDE4160092BA5B /* BRCircle.swift */,
+				951084F726DF0CAE0092BA5B /* StillBreath */,
+				951084E526DCCDD40092BA5B /* ConcentrateEx.swift */,
+				951084E726DCE95A0092BA5B /* ProgressTimer.swift */,
+				951084EB26DCFCEF0092BA5B /* ProgressCircle.swift */,
+				951084E926DCEC560092BA5B /* ProgressBar.swift */,
+			);
+			path = BreathExercise;
+			sourceTree = "<group>";
+		};
+		951084F726DF0CAE0092BA5B /* StillBreath */ = {
+			isa = PBXGroup;
+			children = (
+				951084E326DCCD550092BA5B /* StillExView.swift */,
+				951084F526DDF69F0092BA5B /* StillCircleBreath.swift */,
+				951084F826DF0CEA0092BA5B /* TimerViewModel.swift */,
+				951084C826D87C270092BA5B /* StillBreathView.swift */,
+				951084FA26DF8DF70092BA5B /* TimerView.swift */,
+			);
+			path = StillBreath;
+			sourceTree = "<group>";
+		};
 		951A1EF126D38669004A5F46 = {
 			isa = PBXGroup;
 			children = (
@@ -88,23 +337,16 @@
 		951A1EFC26D38669004A5F46 /* SelfCoachingAp */ = {
 			isa = PBXGroup;
 			children = (
-				95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */,
+				950EF30326E1DDDE0012B2CF /* CoreData */,
 				951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */,
-				951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */,
-				95B3097C26D61B9A00B672D4 /* AppDelegate.swift */,
-				951A1F5226D527E6004A5F46 /* Apple sign in  */,
-				951A1EFF26D38669004A5F46 /* ContentView.swift */,
-				951A1F4926D5075D004A5F46 /* ServiceProvider.swift */,
-				951A1F0C26D387B5004A5F46 /* MainEmptyPage.swift */,
-				951A1F0E26D39424004A5F46 /* BreathView.swift */,
-				951A1F1026D39E3E004A5F46 /* SectionView.swift */,
-				951A1F1226D3B79C004A5F46 /* CaruselView.swift */,
-				951A1F1426D3BE91004A5F46 /* PhotoView.swift */,
-				951A1F1626D3C31B004A5F46 /* ListView.swift */,
-				951A1F4326D50347004A5F46 /* Breathing */,
-				951A1F1826D4A9D6004A5F46 /* RectangleView.swift */,
-				951A1F0126D3866B004A5F46 /* Assets.xcassets */,
 				951A1F0626D3866B004A5F46 /* Info.plist */,
+				95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */,
+				951A1F5226D527E6004A5F46 /* AppleSignIN */,
+				950EF31026E218C40012B2CF /* Realm */,
+				951084D226D8D0470092BA5B /* DI */,
+				951084D326D8D0A30092BA5B /* Root */,
+				951A1F4326D50347004A5F46 /* MainPageDetails */,
+				951A1F0126D3866B004A5F46 /* Assets.xcassets */,
 				951A1F0326D3866B004A5F46 /* Preview Content */,
 			);
 			path = SelfCoachingAp;
@@ -118,21 +360,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		951A1F4326D50347004A5F46 /* Breathing */ = {
+		951A1F4326D50347004A5F46 /* MainPageDetails */ = {
 			isa = PBXGroup;
 			children = (
-				951A1F4426D5036C004A5F46 /* BreathDetailView.swift */,
+				951084DB26D8D2E80092BA5B /* MainList */,
+				951084DA26D8D2380092BA5B /* PersonDetails */,
+				951084D926D8D1F20092BA5B /* Goals */,
+				951084D826D8D1DC0092BA5B /* Statistic */,
+				951084D726D8D1CB0092BA5B /* Sleeping */,
+				951084D626D8D1B00092BA5B /* ScaleView */,
+				951084D526D8D1960092BA5B /* ImportantBusiness */,
+				951084D426D8D1680092BA5B /* QuestionOfDay */,
+				951084C526D7A1A70092BA5B /* Breath */,
+				951084DC26D8D3530092BA5B /* SingleViews */,
 			);
-			path = Breathing;
+			path = MainPageDetails;
 			sourceTree = "<group>";
 		};
-		951A1F5226D527E6004A5F46 /* Apple sign in  */ = {
+		951A1F5226D527E6004A5F46 /* AppleSignIN */ = {
 			isa = PBXGroup;
 			children = (
 				95B3098026D64E6E00B672D4 /* Login.swift */,
 				95B3098226D658DF00B672D4 /* LoginViewModel.swift */,
 			);
-			path = "Apple sign in ";
+			path = AppleSignIN;
 			sourceTree = "<group>";
 		};
 		ABC64AF5D5B3C75716DA5E83 /* Frameworks */ = {
@@ -172,6 +423,8 @@
 			name = SelfCoachingAp;
 			packageProductDependencies = (
 				951A1F4726D503C7004A5F46 /* iOSDevPackage */,
+				950EF30C26E2174E0012B2CF /* RealmSwift */,
+				950EF30E26E2174E0012B2CF /* Realm */,
 			);
 			productName = SelfCoachingAp;
 			productReference = 951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */;
@@ -202,6 +455,7 @@
 			mainGroup = 951A1EF126D38669004A5F46;
 			packageReferences = (
 				951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */,
+				950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 951A1EFB26D38669004A5F46 /* Products */;
 			projectDirPath = "";
@@ -272,20 +526,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */,
+				951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */,
+				9535FB9526EF18640026C5DE /* SavedMinutesListViewModel.swift in Sources */,
+				951084E626DCCDD40092BA5B /* ConcentrateEx.swift in Sources */,
 				95B3097D26D61B9A00B672D4 /* AppDelegate.swift in Sources */,
+				950EF31426E21B570012B2CF /* BreathStruct.swift in Sources */,
+				951084BA26D78DCA0092BA5B /* StatisticView.swift in Sources */,
+				951084CB26D885850092BA5B /* ConcentrateBreathView.swift in Sources */,
+				951084F926DF0CEA0092BA5B /* TimerViewModel.swift in Sources */,
+				95BBCC1426E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift in Sources */,
+				951084E826DCE95A0092BA5B /* ProgressTimer.swift in Sources */,
+				950EF32026E605AB0012B2CF /* SavedMinutesList.swift in Sources */,
+				951084C926D87C270092BA5B /* StillBreathView.swift in Sources */,
+				9535FB9326EB46AA0026C5DE /* Duble.swift in Sources */,
+				951084DF26D9315E0092BA5B /* Resolver.swift in Sources */,
+				951084EC26DCFCEF0092BA5B /* ProgressCircle.swift in Sources */,
+				951084FB26DF8DF70092BA5B /* TimerView.swift in Sources */,
 				951A1F1726D3C31B004A5F46 /* ListView.swift in Sources */,
 				95B3098126D64E6E00B672D4 /* Login.swift in Sources */,
+				951084EE26DDCF530092BA5B /* FlowerBrathView.swift in Sources */,
+				951084B626D78D6C0092BA5B /* ScaleView.swift in Sources */,
+				951084F226DDDF970092BA5B /* Flower2Content.swift in Sources */,
+				951084CF26D88F780092BA5B /* BreathStartPageView.swift in Sources */,
+				951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */,
+				95BBCC1026E6337800A4A7B8 /* SceneDelegate.swift in Sources */,
+				951084F026DDDF160092BA5B /* Flower2.swift in Sources */,
+				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,
+				950EF31226E218E00012B2CF /* BreathDB.swift in Sources */,
+				951084F626DDF69F0092BA5B /* StillCircleBreath.swift in Sources */,
+				951084C726D7A8B90092BA5B /* BreathCaruselView.swift in Sources */,
 				951A1F0F26D39424004A5F46 /* BreathView.swift in Sources */,
-				951A1F0D26D387B5004A5F46 /* MainEmptyPage.swift in Sources */,
-				951A1F4526D5036C004A5F46 /* BreathDetailView.swift in Sources */,
+				951A1F4526D5036C004A5F46 /* QuestionOfDayView.swift in Sources */,
 				95B3098326D658DF00B672D4 /* LoginViewModel.swift in Sources */,
-				951A1F1526D3BE91004A5F46 /* PhotoView.swift in Sources */,
-				951A1F1126D39E3E004A5F46 /* SectionView.swift in Sources */,
 				951A1F1926D4A9D6004A5F46 /* RectangleView.swift in Sources */,
+				951084B826D78DA00092BA5B /* SleepView.swift in Sources */,
+				951084CD26D88AD80092BA5B /* BreathViewModel.swift in Sources */,
+				951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */,
+				95BBCC1226E635CA00A4A7B8 /* Minutes.swift in Sources */,
 				951A1F0026D38669004A5F46 /* ContentView.swift in Sources */,
-				951A1F1326D3B79C004A5F46 /* CaruselView.swift in Sources */,
+				951084D126D8A1930092BA5B /* EnergyBreathView.swift in Sources */,
+				950EF31626E21DAB0012B2CF /* DBViewModel.swift in Sources */,
+				951084F426DDE4160092BA5B /* BRCircle.swift in Sources */,
+				951084BE26D790220092BA5B /* GoalsView.swift in Sources */,
 				951A1F4A26D5075D004A5F46 /* ServiceProvider.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
+				951084E126DC9C320092BA5B /* DependencyManager.swift in Sources */,
+				951084EA26DCEC560092BA5B /* ProgressBar.swift in Sources */,
+				951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */,
+				950EF30626E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld in Sources */,
+				950EF30826E1F6CC0012B2CF /* PersistenceController.swift in Sources */,
+				95BBCC1626E637C000A4A7B8 /* Minutes+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +721,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,7 +747,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -484,6 +775,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.13.0;
+			};
+		};
 		951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitlab.issart.com/nbaklanov/iosdevpackage.git";
@@ -495,12 +794,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		950EF30C26E2174E0012B2CF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		950EF30E26E2174E0012B2CF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
 		951A1F4726D503C7004A5F46 /* iOSDevPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */;
 			productName = iOSDevPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		950EF30426E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				950EF30526E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodel */,
+			);
+			currentVersion = 950EF30526E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodel */;
+			path = CoreDataModelBreath.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 951A1EF226D38669004A5F46 /* Project object */;
 }
