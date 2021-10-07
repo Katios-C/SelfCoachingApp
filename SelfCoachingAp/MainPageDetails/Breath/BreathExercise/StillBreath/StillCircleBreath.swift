@@ -7,15 +7,16 @@ struct StillBRCircle: View {
     
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    
+   // var startButton = StartButtonBreath(isStarted: false)
     var timerView = TimerView()
-    
+    var stillExView = StillExView()
     @State private var  stopAnimation = true
-        @State private var countdownTimer: Timer?
+    @State private var countdownTimer: Timer?
     
     @State var counter: Int = 0
-      var countTo: Int = 300
+      var countTo: Int = 60
     @State var isPlay = false
+    
     
     @State private var breathIn = false
     @State private var braethOut = false
@@ -42,10 +43,10 @@ struct StillBRCircle: View {
     
     var body: some View {
         
-        var animation = isPlay ? {       withAnimation(Animation.linear(duration: 15).repeatCount(countTo / 15, autoreverses: false)) {
-            circularMotion = true
-        }
-        } : {}
+//        var animation = isPlay ? {       withAnimation(Animation.linear(duration: 15).repeatCount(countTo / 15, autoreverses: false)) {
+//            circularMotion = true
+//        }
+//        } : {}
         
         
         VStack {
@@ -62,20 +63,7 @@ struct StillBRCircle: View {
                         .stroke(lineWidth: 5)
                         .frame(width: 370, height: 370)
                         .foregroundColor(iron)
-//
-//                    Circle() // region for exhale
-//                        .trim(from: 0, to: 1/3)
-//                        .stroke(lineWidth: 5)
-//                        .frame(width: 370, height: 370)
-//                        .foregroundColor(aqua)
-//                        .rotationEffect(.degrees(-120))
-//
-//                    Circle() // region for inhale
-//                        .trim(from: 0, to: 1/3)
-//                        .stroke(lineWidth: 5)
-//                        .frame(width: 370, height: 370)
-//                        .foregroundColor(grape)
-//                        .rotationEffect(.degrees(120))
+       .rotationEffect(.degrees(120))
                     
                     Capsule() //bottom
                         .trim(from: 1/2, to: 1)
@@ -90,12 +78,6 @@ struct StillBRCircle: View {
                         .rotationEffect(.degrees(247))
                         .offset(x: 175, y: -66)
                     
-//                    Capsule() //right
-//                        .trim(from: 1/2, to: 1)
-//                        .frame(width: 20, height: 25)
-//                        .foregroundColor(snsow)
-//                        .rotationEffect(.degrees(-90))
-//                        .offset(x: 187)
                     
                     Capsule() //left
                         .trim(from: 1/2, to: 1)
@@ -119,26 +101,28 @@ struct StillBRCircle: View {
                             .offset(y: 187)
                             .rotationEffect(.degrees(circularMotion ? 360 : 0))
                           //  .onTapGesture(perform: animation)
-                            
-                            .onAppear{
-                              
-    
+                        
+                            .onChange(of: isPlay, perform: {_ in
+                             //   isPlay = timerView.isStart
+    //isPlay = true
+                                timerView.isStart = true
                                 withAnimation(Animation.linear(duration: 15).repeatCount(countTo / 15, autoreverses: false)) {
                                     self.circularMotion = true
                                 }
 
                            
-                            }
+                            })
                     
                     }
-                }.frame(width: 360, height: 360)
+                }
+                .frame(width: 360, height: 360)
 //                .scaleEffect(breathIn ? 1 : 1)
 //                .scaleEffect(hold ? 1 : 1)
 //                .scaleEffect(braethOut ? 1 : 1)
                 
+              //  .onReceive(isPlay, perform: {_ in })
                 
-                .onAppear() {
-                    
+                .onChange(of: isPlay, perform: {_ in
                     withAnimation(Animation.linear(duration: 5)) {
                         
                         self.breathIn.toggle()
@@ -152,33 +136,25 @@ struct StillBRCircle: View {
                     withAnimation(Animation.linear(duration: 5).delay(9)) {
                         self.braethOut.toggle()
                     }
-//                    withAnimation(Animation.linear(duration: 5).delay(15)) {
+                })
+//                .onAppear() {
+//
+//                    withAnimation(Animation.linear(duration: 5)) {
+//
+//                        self.breathIn.toggle()
+//                    }
+//
+//                    withAnimation(Animation.linear(duration: 5).delay(5)) {
+//
 //                        self.hold.toggle()
 //                    }
-                }
-//                VStack {
-//                    HStack {
-//                        Text("Задержка")
-//                    }
 //
-//                    HStack {
-//                        Text("Вдох")
-//                        Spacer()
+//                    withAnimation(Animation.linear(duration: 5).delay(9)) {
+//                        self.braethOut.toggle()
 //                    }
-//                    HStack {
-//                        Spacer()
-//                        Text("Выдох")
-//
-//                    }
-//
 //
 //                }
-//                .padding(5)
-               
-               // Text(breathIn ? "Вдох" : "Выдох")
-//
-                
-               
+
                     
                 ZStack {
                     Text("Задержка")
@@ -186,7 +162,8 @@ struct StillBRCircle: View {
                         .scaleEffect(1)
                         .opacity(displayBreathOut ? 1: 0)
                         .opacity(hideBreathOut ? 0 : 1)
-                        .onAppear() {
+                        .onChange(of: isPlay, perform: {_ in
+                            
                             withAnimation(Animation.easeOut(duration: 0.5).delay(11)) {
                                 self.displayBreathOut.toggle()
                             }
@@ -194,21 +171,7 @@ struct StillBRCircle: View {
                             withAnimation(Animation.easeOut(duration: 0.5).delay(15)) {
                                 self.hideBreathOut.toggle()
                             }
-                        }
-
-//                    Text("Hold")
-//                        .foregroundColor(snsow)
-//                        .scaleEffect(1)
-//                        .opacity(displaySecondHold ? 1: 0)
-//                        .opacity(hideSecondHold ? 0 : 1)
-//                        .onAppear() {
-//                            withAnimation(Animation.easeInOut(duration: 0.4).delay(12)) {
-//                                self.displaySecondHold.toggle()
-//                            }
-//                            withAnimation(Animation.easeInOut(duration: 0.4).delay(16)) {
-//                                self.hideSecondHold.toggle()
-//                            }
-//                        }
+                        })
 
 
                     Text("Выдох")
@@ -216,35 +179,54 @@ struct StillBRCircle: View {
                         .scaleEffect(1)
                         .opacity(displayHold ? 1: 0)
                         .opacity(hideHold ? 0 : 1)
-                        .onAppear() {
+                        .onChange(of: isPlay, perform: {_ in
+                           
                             withAnimation((Animation.easeInOut(duration: 0.5).delay(5))) {
                                 self.displayHold.toggle()
                             }
                             withAnimation((Animation.easeInOut(duration: 0.5).delay(10))) {
                                 self.hideHold.toggle()
                             }
-
-                        }
+                        })
 
 
                     Text("Вдох")
                         .foregroundColor(snsow)
                         .opacity(hideBreathIn ? 0 : 1)
                         .animation(Animation.easeInOut(duration: 0.5).delay(4))
-                        .onAppear(){
+                        .onChange(of: isPlay, perform: {_ in
+                            
                             self.hideBreathIn.toggle()
-                        }
+                    
+                        })
 
                 }
             }
         }
-//            Button(action: {
-//                isPlay.toggle()
-//
-//            }, label: {Text("Start")})
+            
+            
+//            VStack {
+//                TimerButton(label: isPlay ? "Дышим" : "Начать дышать", buttonColor: .blue).onTapGesture {
+//                 print("НАЧАТЬ ДЫШАТЬ")
+//                   isPlay = !isPlay
+////                    if !isPlay {
+////                        isPlay = true
+////                        print("ДЫШИМ")
+////                    }
+////                    else {
+////                        isPlay = false
+////                        print("НЕ ДЫШИМ")
+////                    }
+//                }
+//                 
+//                }
+
+            
+            
         } //vstack
-       
+        
     }
+    
     
     func switchText() -> String {
         if self.breathIn {

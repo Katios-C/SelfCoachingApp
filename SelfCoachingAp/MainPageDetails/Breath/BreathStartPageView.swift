@@ -1,9 +1,3 @@
-//
-//  BreathStartPageView.swift
-//  SelfCoachingAp
-//
-//  Created by Екатерина Чернова on 27.08.2021.
-//
 
 import SwiftUI
 

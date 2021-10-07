@@ -1,17 +1,26 @@
 
 import Foundation
 
-class TimerViewModel: ObservableObject, Injectable {
+class TimerViewModel: ObservableObject {
     
-    @Published var secondsElapsed = 30
+    @Published var secondsElapsed = 29
     
       @Published  var timer = Timer()
     @Published var mode: stopWatchMode = .stopped
     var counter: Int = 0
      var breath = ["Выдох", "Задержка"]
     
-     var text = "НАЧАЛО"
+  //  @Published var isAnimated = false
     
+    var isA = false {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    
+    
+     var text = "НАЧАЛО"
+    @Published var isButtonPressed = false
     var indexForText = 0
     
     let timerForText = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
@@ -26,6 +35,21 @@ class TimerViewModel: ObservableObject, Injectable {
           //  self.restart()
         
             }
+    }
+    
+    
+    func delaystart() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
+           self.isA.toggle()
+            print("isS - \(self.isA)")
+            if !self.isA {
+                print("block else")
+                self.delaystart()
+            }
+            print("Dispatch")
+                           }
+       // self.objectWillChange.send()
     }
     
     func startTextChange() {
@@ -48,6 +72,8 @@ class TimerViewModel: ObservableObject, Injectable {
            mode = .paused
        }
        
+ 
+    
     
 //    func stop() {
 //           timer.invalidate()

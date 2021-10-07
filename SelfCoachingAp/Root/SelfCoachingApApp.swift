@@ -9,7 +9,7 @@ struct SelfCoachingApApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @AppStorage("log_status") var log_Status = false
     
-    private let manager = DependencyManager()
+  //  private let manager = DependencyManager()
  //   @Environment(\.scenePhase) var scenePhase
     let persistenceController = PersistenceController.shared
   

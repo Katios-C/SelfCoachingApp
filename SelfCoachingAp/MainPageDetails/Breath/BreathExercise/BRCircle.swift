@@ -1,9 +1,3 @@
-//
-//  BRCircle.swift
-//  SelfCoachingAp
-//
-//  Created by Екатерина Чернова on 31.08.2021.
-//
 
 import SwiftUI
 
@@ -20,6 +14,8 @@ struct BRCircle: View {
     @State private var hideHold = false
     @State private var displaySecondHold = false
     @State private var hideSecondHold = false
+    
+    
     
     let grape = Color.purple
     let aqua = Color.blue

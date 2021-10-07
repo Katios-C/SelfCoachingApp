@@ -1,9 +1,12 @@
 import SwiftUI
 import CoreData
+import Resolver
 
 struct SavedMinutesList: View {
-    @ObservedObject var viewModel = SavedMinutesViewModel.shared
+  //  @ObservedObject var viewModel = SavedMinutesViewModel.shared
     @State var fieldText = ""
+    
+    @InjectedObject var viewModel: SavedMinutesViewModel
     
     var body: some View {
         VStack {
@@ -33,6 +36,9 @@ struct SavedMinutesList: View {
             }
             
             Spacer()
+        }
+        .onAppear{
+            viewModel.fetchMinutes()
         }
     }
 }

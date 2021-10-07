@@ -5,7 +5,7 @@ import CryptoKit
 import AuthenticationServices
 import Firebase
 
-class LoginViewModel: ObservableObject, Injectable {
+class LoginViewModel: ObservableObject {
     @Published var currentNonce: String?
     @AppStorage("log_status") var log_Status = false
    

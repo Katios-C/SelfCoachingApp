@@ -8,7 +8,10 @@ struct StillExView: View {
     let persistenceController = PersistenceController.shared
     @State var counter: Int = 0
       var countTo: Int = 300
+    @State var isPlay = false
     
+    
+    @State var isStarted = false
     
     var body: some View {
         VStack {
@@ -16,15 +19,19 @@ struct StillExView: View {
             Spacer()
       
             
-            StillBRCircle()
-            .padding()
-
+//            StillBRCircle()
+//            .padding()
 
             
-           TimerView()
-            .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            
-            .padding()
+            if isStarted {
+                TimerView().onAppear() {
+                    isPlay = true
+                }
+
+            } else {
+                StartButtonBreath(isStarted: $isStarted)
+            }
+     //  MainView()
             
         }
         .padding()

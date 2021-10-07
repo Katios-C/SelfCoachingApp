@@ -10,18 +10,18 @@ struct ListView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     let colors: [Color] = [.gray, .green, .purple, .yellow, .orange, .pink]
-    let titles = ["Дыхание", "Вопрос дня", "Важное дело", "Шкала состояния", "Сон", "Статистика" ]
+ //   let titles = ["Готовые пранаямы", "Настроить интервалы", "Подробнее о типах дыхания", "Обо мне", "МОК", "МОК" ]
     
     
     
     var body: some View {
         let items = [
-            RectangleView(color: .gray, title: "Дыхание", id: 0),
-            RectangleView(color: .gray, title: "Вопрос дня", id: 1),
-            RectangleView(color: .gray, title: "Важное дело", id: 2),
-            RectangleView(color: .gray, title: "Шкала состояния", id: 3),
-            RectangleView(color: .gray, title: "Сон", id: 4),
-            RectangleView(color: .gray, title: "Статистика", id: 5)
+            RectangleView(color: .gray, title: "Готовые пранаямы", id: 0),
+            RectangleView(color: .gray, title: "Настроить интервалы", id: 1),
+            RectangleView(color: .gray, title: "Подробнее о типах дыхания", id: 2),
+            RectangleView(color: .gray, title: "Обо мне", id: 3),
+            RectangleView(color: .gray, title: "МОК", id: 4),
+            RectangleView(color: .gray, title: "МОК", id: 5)
         ]
         
         let spacing: CGFloat = 16

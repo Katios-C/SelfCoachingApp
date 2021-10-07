@@ -29,8 +29,6 @@
 		951084CD26D88AD80092BA5B /* BreathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084CC26D88AD80092BA5B /* BreathViewModel.swift */; };
 		951084CF26D88F780092BA5B /* BreathStartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084CE26D88F780092BA5B /* BreathStartPageView.swift */; };
 		951084D126D8A1930092BA5B /* EnergyBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084D026D8A1930092BA5B /* EnergyBreathView.swift */; };
-		951084DF26D9315E0092BA5B /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084DE26D9315E0092BA5B /* Resolver.swift */; };
-		951084E126DC9C320092BA5B /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E026DC9C320092BA5B /* DependencyManager.swift */; };
 		951084E426DCCD550092BA5B /* StillExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E326DCCD550092BA5B /* StillExView.swift */; };
 		951084E626DCCDD40092BA5B /* ConcentrateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E526DCCDD40092BA5B /* ConcentrateEx.swift */; };
 		951084E826DCE95A0092BA5B /* ProgressTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E726DCE95A0092BA5B /* ProgressTimer.swift */; };
@@ -54,8 +52,13 @@
 		951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 951A1F4726D503C7004A5F46 /* iOSDevPackage */; };
 		951A1F4A26D5075D004A5F46 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1F4926D5075D004A5F46 /* ServiceProvider.swift */; };
 		9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB8D26E9B1BC0026C5DE /* Button.swift */; };
-		9535FB9326EB46AA0026C5DE /* Duble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9226EB46AA0026C5DE /* Duble.swift */; };
 		9535FB9526EF18640026C5DE /* SavedMinutesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9426EF18640026C5DE /* SavedMinutesListViewModel.swift */; };
+		9535FB9726F092030026C5DE /* StartButtonBreath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9626F092030026C5DE /* StartButtonBreath.swift */; };
+		9535FB9A26F0BAE20026C5DE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9535FB9926F0BAE20026C5DE /* Resolver */; };
+		9535FB9C26F0BAFF0026C5DE /* ResolverDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9B26F0BAFF0026C5DE /* ResolverDI.swift */; };
+		9535FB9E26F1FE360026C5DE /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9D26F1FE350026C5DE /* CircleFrame.swift */; };
+		9535FBA026F46BC60026C5DE /* OnlyCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9F26F46BC60026C5DE /* OnlyCircle.swift */; };
+		95AA0F2C270DB59000865891 /* TAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA0F2B270DB59000865891 /* TAnimation.swift */; };
 		95B3097D26D61B9A00B672D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3097C26D61B9A00B672D4 /* AppDelegate.swift */; };
 		95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */; };
 		95B3098126D64E6E00B672D4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3098026D64E6E00B672D4 /* Login.swift */; };
@@ -90,8 +93,6 @@
 		951084CC26D88AD80092BA5B /* BreathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewModel.swift; sourceTree = "<group>"; };
 		951084CE26D88F780092BA5B /* BreathStartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathStartPageView.swift; sourceTree = "<group>"; };
 		951084D026D8A1930092BA5B /* EnergyBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBreathView.swift; sourceTree = "<group>"; };
-		951084DE26D9315E0092BA5B /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
-		951084E026DC9C320092BA5B /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		951084E326DCCD550092BA5B /* StillExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillExView.swift; sourceTree = "<group>"; };
 		951084E526DCCDD40092BA5B /* ConcentrateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateEx.swift; sourceTree = "<group>"; };
 		951084E726DCE95A0092BA5B /* ProgressTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTimer.swift; sourceTree = "<group>"; };
@@ -117,8 +118,12 @@
 		951A1F4926D5075D004A5F46 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelfCoachingAp.entitlements; sourceTree = "<group>"; };
 		9535FB8D26E9B1BC0026C5DE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		9535FB9226EB46AA0026C5DE /* Duble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duble.swift; sourceTree = "<group>"; };
 		9535FB9426EF18640026C5DE /* SavedMinutesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMinutesListViewModel.swift; sourceTree = "<group>"; };
+		9535FB9626F092030026C5DE /* StartButtonBreath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonBreath.swift; sourceTree = "<group>"; };
+		9535FB9B26F0BAFF0026C5DE /* ResolverDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverDI.swift; sourceTree = "<group>"; };
+		9535FB9D26F1FE350026C5DE /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
+		9535FB9F26F46BC60026C5DE /* OnlyCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCircle.swift; sourceTree = "<group>"; };
+		95AA0F2B270DB59000865891 /* TAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimation.swift; sourceTree = "<group>"; };
 		95B3097C26D61B9A00B672D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95B3098026D64E6E00B672D4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 				950EF30D26E2174E0012B2CF /* RealmSwift in Frameworks */,
 				951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */,
 				950EF30F26E2174E0012B2CF /* Realm in Frameworks */,
+				9535FB9A26F0BAE20026C5DE /* Resolver in Frameworks */,
 				DE7BFDE20C48A830368667E7 /* Pods_SelfCoachingAp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +166,6 @@
 			children = (
 				95BBCC1326E636FD00A4A7B8 /* Minutes+CoreDataProperties.swift */,
 				950EF30726E1F6CC0012B2CF /* PersistenceController.swift */,
-				9535FB9226EB46AA0026C5DE /* Duble.swift */,
 				950EF30426E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld */,
 				95BBCC1526E637C000A4A7B8 /* Minutes+CoreDataClass.swift */,
 				950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */,
@@ -197,8 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				951A1F4926D5075D004A5F46 /* ServiceProvider.swift */,
-				951084DE26D9315E0092BA5B /* Resolver.swift */,
-				951084E026DC9C320092BA5B /* DependencyManager.swift */,
+				9535FB9B26F0BAFF0026C5DE /* ResolverDI.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -309,9 +313,12 @@
 			children = (
 				951084E326DCCD550092BA5B /* StillExView.swift */,
 				951084F526DDF69F0092BA5B /* StillCircleBreath.swift */,
+				9535FB9D26F1FE350026C5DE /* CircleFrame.swift */,
 				951084F826DF0CEA0092BA5B /* TimerViewModel.swift */,
 				951084C826D87C270092BA5B /* StillBreathView.swift */,
 				951084FA26DF8DF70092BA5B /* TimerView.swift */,
+				9535FB9626F092030026C5DE /* StartButtonBreath.swift */,
+				9535FB9F26F46BC60026C5DE /* OnlyCircle.swift */,
 			);
 			path = StillBreath;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 		951A1F4326D50347004A5F46 /* MainPageDetails */ = {
 			isa = PBXGroup;
 			children = (
+				95AA0F2A270DB53000865891 /* Timer and Animation */,
 				951084DB26D8D2E80092BA5B /* MainList */,
 				951084DA26D8D2380092BA5B /* PersonDetails */,
 				951084D926D8D1F20092BA5B /* Goals */,
@@ -384,6 +392,14 @@
 				95B3098226D658DF00B672D4 /* LoginViewModel.swift */,
 			);
 			path = AppleSignIN;
+			sourceTree = "<group>";
+		};
+		95AA0F2A270DB53000865891 /* Timer and Animation */ = {
+			isa = PBXGroup;
+			children = (
+				95AA0F2B270DB59000865891 /* TAnimation.swift */,
+			);
+			path = "Timer and Animation";
 			sourceTree = "<group>";
 		};
 		ABC64AF5D5B3C75716DA5E83 /* Frameworks */ = {
@@ -425,6 +441,7 @@
 				951A1F4726D503C7004A5F46 /* iOSDevPackage */,
 				950EF30C26E2174E0012B2CF /* RealmSwift */,
 				950EF30E26E2174E0012B2CF /* Realm */,
+				9535FB9926F0BAE20026C5DE /* Resolver */,
 			);
 			productName = SelfCoachingAp;
 			productReference = 951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */;
@@ -456,6 +473,7 @@
 			packageReferences = (
 				951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */,
 				950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				9535FB9826F0BAE20026C5DE /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 951A1EFB26D38669004A5F46 /* Products */;
 			projectDirPath = "";
@@ -539,19 +557,21 @@
 				951084E826DCE95A0092BA5B /* ProgressTimer.swift in Sources */,
 				950EF32026E605AB0012B2CF /* SavedMinutesList.swift in Sources */,
 				951084C926D87C270092BA5B /* StillBreathView.swift in Sources */,
-				9535FB9326EB46AA0026C5DE /* Duble.swift in Sources */,
-				951084DF26D9315E0092BA5B /* Resolver.swift in Sources */,
 				951084EC26DCFCEF0092BA5B /* ProgressCircle.swift in Sources */,
 				951084FB26DF8DF70092BA5B /* TimerView.swift in Sources */,
 				951A1F1726D3C31B004A5F46 /* ListView.swift in Sources */,
+				9535FBA026F46BC60026C5DE /* OnlyCircle.swift in Sources */,
 				95B3098126D64E6E00B672D4 /* Login.swift in Sources */,
 				951084EE26DDCF530092BA5B /* FlowerBrathView.swift in Sources */,
 				951084B626D78D6C0092BA5B /* ScaleView.swift in Sources */,
 				951084F226DDDF970092BA5B /* Flower2Content.swift in Sources */,
+				95AA0F2C270DB59000865891 /* TAnimation.swift in Sources */,
 				951084CF26D88F780092BA5B /* BreathStartPageView.swift in Sources */,
 				951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */,
 				95BBCC1026E6337800A4A7B8 /* SceneDelegate.swift in Sources */,
+				9535FB9E26F1FE360026C5DE /* CircleFrame.swift in Sources */,
 				951084F026DDDF160092BA5B /* Flower2.swift in Sources */,
+				9535FB9726F092030026C5DE /* StartButtonBreath.swift in Sources */,
 				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,
 				950EF31226E218E00012B2CF /* BreathDB.swift in Sources */,
 				951084F626DDF69F0092BA5B /* StillCircleBreath.swift in Sources */,
@@ -571,11 +591,11 @@
 				951084BE26D790220092BA5B /* GoalsView.swift in Sources */,
 				951A1F4A26D5075D004A5F46 /* ServiceProvider.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
-				951084E126DC9C320092BA5B /* DependencyManager.swift in Sources */,
 				951084EA26DCEC560092BA5B /* ProgressBar.swift in Sources */,
 				951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */,
 				950EF30626E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld in Sources */,
 				950EF30826E1F6CC0012B2CF /* PersistenceController.swift in Sources */,
+				9535FB9C26F0BAFF0026C5DE /* ResolverDI.swift in Sources */,
 				95BBCC1626E637C000A4A7B8 /* Minutes+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -791,6 +811,14 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		9535FB9826F0BAE20026C5DE /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -808,6 +836,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */;
 			productName = iOSDevPackage;
+		};
+		9535FB9926F0BAE20026C5DE /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9535FB9826F0BAE20026C5DE /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 /* End XCSwiftPackageProductDependency section */
 

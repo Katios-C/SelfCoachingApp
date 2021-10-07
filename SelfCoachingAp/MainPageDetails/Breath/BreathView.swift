@@ -20,7 +20,7 @@ struct BreathView: View {
             
 
           BreathCaruselView()
-          
+            
             
             if breathViewModelShared.playingSubj == "" {
                 BreathStartPageView() }

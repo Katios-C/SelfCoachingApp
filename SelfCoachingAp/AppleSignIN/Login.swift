@@ -1,10 +1,11 @@
 import SwiftUI
 import AuthenticationServices
+import Resolver
 
 struct Login: View {
 
   
-    @Inject var dependency: LoginViewModel
+    @Injected var dependency: LoginViewModel
     
     var body: some View {
         

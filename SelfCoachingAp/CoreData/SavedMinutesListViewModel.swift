@@ -1,31 +1,17 @@
 import Foundation
 import CoreData
 import SwiftUI
+import Combine
 
 class SavedMinutesViewModel: ObservableObject {
-    
+    let minutesList: PassthroughSubject<Array<Minutes>, Never> = PassthroughSubject<Array<Minutes>, Never>()
     
     static let shared = SavedMinutesViewModel()
     var persisitenceController = PersistenceController()
     var currentMinutes:[Minutes] = []
     let minutesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Minutes")
     
-    
-  //  let container: NSPersistentContainer
-    
-//    init(inMemory: Bool = false) {
-//        container = NSPersistentContainer(name: "CoreDataModelBreath")
-//        
-//        if inMemory {
-//            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
-//        }
-//        
-//        container.loadPersistentStores { description, error in
-//            if let error = error {
-//                fatalError("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
+ 
     
     func saveContext() {
         persisitenceController.saveContext()
@@ -33,21 +19,33 @@ class SavedMinutesViewModel: ObservableObject {
     
     func updateData(_ data:FetchedResults<Minutes>.Element) {
         persisitenceController.updateData(data)
+        let lists = persisitenceController.fetchMinutes(currentMinutes: &currentMinutes, minutesFetch: minutesFetch)
+        minutesList.send(lists)
+
         self.objectWillChange.send()
     }
     
     func deleteData(index:Int) {
         persisitenceController.deleteData(index: index, currentMinutes: currentMinutes)
+        let lists = persisitenceController.fetchMinutes(currentMinutes: &currentMinutes, minutesFetch: minutesFetch)
+        minutesList.send(lists)
+
         self.objectWillChange.send()
     }
     
     func saveNewData( fieldText: inout String) {
         persisitenceController.saveNewData(fieldText: &fieldText)
+        let lists = persisitenceController.fetchMinutes(currentMinutes: &currentMinutes, minutesFetch: minutesFetch)
+        minutesList.send(lists)
+
+        
         self.objectWillChange.send()
     }
     
     func fetchMinutes() -> [Minutes] {
-        persisitenceController.fetchMinutes(currentMinutes: &currentMinutes, minutesFetch: minutesFetch)
+        let lists = persisitenceController.fetchMinutes(currentMinutes: &currentMinutes, minutesFetch: minutesFetch)
+        minutesList.send(lists)
+        return lists
     }
     
 }
