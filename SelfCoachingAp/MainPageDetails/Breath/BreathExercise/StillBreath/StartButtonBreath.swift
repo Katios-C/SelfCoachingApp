@@ -26,8 +26,3 @@ struct StartButtonBreath: View {
     }
 }
 
-struct StartButton_Previews: PreviewProvider {
-    static var previews: some View {
-        StartButtonBreath(isStarted: .constant(false))
-    }
-}

@@ -53,8 +53,3 @@ struct BreathStartPageView: View {
     }
 }
 
-struct BreathStartPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        BreathStartPageView()
-    }
-}

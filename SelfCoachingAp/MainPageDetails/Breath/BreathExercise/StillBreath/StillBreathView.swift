@@ -6,7 +6,7 @@ struct StillBreathView: View {
         VStack {
 
            
-        Text ("Дыхание, которое успокаивает ум, улучшает психологическое состояние, замедляет и расслабляет. Отлично подходит для вечера или в любой стрессовой ситуации.")
+        Text ("StillBreathView - Дыхание, которое успокаивает ум, улучшает психологическое состояние, замедляет и расслабляет. Отлично подходит для вечера или в любой стрессовой ситуации.")
             .fontWeight(.thin)
             .padding()
             Divider()
@@ -50,8 +50,3 @@ struct StillBreathView: View {
     }
 }
 
-struct StillBreathView_Previews: PreviewProvider {
-    static var previews: some View {
-        StillBreathView()
-    }
-}

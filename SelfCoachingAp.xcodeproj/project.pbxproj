@@ -15,6 +15,7 @@
 		950EF31426E21B570012B2CF /* BreathStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31326E21B570012B2CF /* BreathStruct.swift */; };
 		950EF31626E21DAB0012B2CF /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31526E21DAB0012B2CF /* DBViewModel.swift */; };
 		950EF32026E605AB0012B2CF /* SavedMinutesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */; };
+		950F139827100D0500E82A8A /* TriangleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F139727100D0500E82A8A /* TriangleTimer.swift */; };
 		951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B326D78BC00092BA5B /* ImportentBusinessView.swift */; };
 		951084B626D78D6C0092BA5B /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B526D78D6C0092BA5B /* ScaleView.swift */; };
 		951084B826D78DA00092BA5B /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084B726D78DA00092BA5B /* SleepView.swift */; };
@@ -79,6 +80,7 @@
 		950EF31326E21B570012B2CF /* BreathStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathStruct.swift; sourceTree = "<group>"; };
 		950EF31526E21DAB0012B2CF /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
 		950EF31F26E605AB0012B2CF /* SavedMinutesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMinutesList.swift; sourceTree = "<group>"; };
+		950F139727100D0500E82A8A /* TriangleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleTimer.swift; sourceTree = "<group>"; };
 		951084B326D78BC00092BA5B /* ImportentBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportentBusinessView.swift; sourceTree = "<group>"; };
 		951084B526D78D6C0092BA5B /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
 		951084B726D78DA00092BA5B /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				95AA0F2B270DB59000865891 /* TAnimation.swift */,
+				950F139727100D0500E82A8A /* TriangleTimer.swift */,
 			);
 			path = "Timer and Animation";
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				951084BE26D790220092BA5B /* GoalsView.swift in Sources */,
 				951A1F4A26D5075D004A5F46 /* ServiceProvider.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
+				950F139827100D0500E82A8A /* TriangleTimer.swift in Sources */,
 				951084EA26DCEC560092BA5B /* ProgressBar.swift in Sources */,
 				951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */,
 				950EF30626E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld in Sources */,

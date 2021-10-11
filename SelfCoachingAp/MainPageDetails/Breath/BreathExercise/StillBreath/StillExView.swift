@@ -14,8 +14,25 @@ struct StillExView: View {
     @State var isStarted = false
     
     var body: some View {
+        ZStack {
+            Image("m2")
+                .resizable()
+                .aspectRatio( contentMode: .fill)
+                
+              //  .cornerRadius(8)
+               // .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.bottom)
+                
         VStack {
-            TopTemplateForDetalView()
+            Text("StillExView")
+            Text("Back").onTapGesture {
+                navigation.pop(to: .previous)
+                    
+            }
+            .padding(8)
+            .border(.red, width: 2)
+          //  TopTemplateForDetalView()
             Spacer()
       
             
@@ -23,19 +40,25 @@ struct StillExView: View {
 //            .padding()
 
             
-            if isStarted {
-                TimerView().onAppear() {
-                    isPlay = true
-                }
-
-            } else {
-                StartButtonBreath(isStarted: $isStarted)
-            }
-     //  MainView()
-            
+//            if isStarted {
+//                TimerView().onAppear() {
+//                    isPlay = true
+//                }
+//
+//            } else {
+//                StartButtonBreath(isStarted: $isStarted)
+//            }
+   
+            TriangleTimer()
+                
         }
-        .padding()
+        
+       
+     
     }
+       // .ignoresSafeArea()
+        
+      //  .padding()
 
 }
-
+}

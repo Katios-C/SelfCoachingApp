@@ -37,6 +37,37 @@ class TimerViewModel: ObservableObject {
             }
     }
     
+    func breathWord(time: Int, type: String) -> String {
+        var returnWord = ""
+        
+        if type == "Бодрость" {
+        if time >= 10 {
+            returnWord = "Вдох"
+        }
+        else if time <= 9 && time > 5 {
+            returnWord = "Задержка"
+        }
+        else {
+            returnWord = "Выдох"
+        }
+}
+
+        if type == "Спокойствие" {
+            if time >= 10 {
+                returnWord = "вдох"
+            }
+            else if time <= 9 && time > 4 {
+                returnWord = "выдох"
+            }
+            else {
+                returnWord = "задержка"
+            }
+        }
+        
+        
+        return returnWord
+    }
+    
     
     func delaystart() {
         
