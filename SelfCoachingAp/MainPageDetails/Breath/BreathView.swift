@@ -5,6 +5,7 @@ import iOSDevPackage
 import Combine
 
 struct BreathView: View {
+    @StateObject var stateObject: fourCirclesViewModel
     
     @EnvironmentObject private var navigation: NavigationControllerViewModel
    
@@ -49,7 +50,7 @@ struct BreathView: View {
                     .onTapGesture {
                        
                         switch breathViewModelShared.playingSubj {
-                        case "Спокойствие" : navigation.push(StillExView())
+                        case "Спокойствие" : navigation.push(StillExView(stateObject: stateObject))
                         case "Концентрация": navigation.push(ConcentrateEx())
                             
                         default:

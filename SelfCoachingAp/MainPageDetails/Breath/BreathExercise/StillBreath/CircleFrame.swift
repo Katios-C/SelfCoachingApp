@@ -1,9 +1,14 @@
 import SwiftUI
+import iOSDevPackage
+
+
 struct MainView: View {
     @State private var fillPoint = 1.0
-    @State private var animationDuration = 10.0
+    @State private var animationDuration = 5.0
     @State private var  stopAnimation = true
     @State private var countdownTimer: Timer?
+    
+    @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     private var ring: Ring {
         let ring = Ring(fillPoint: self.fillPoint)
@@ -12,20 +17,29 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            ring.stroke(Color.red, lineWidth: 15.0)
+            Text("MainTriangle")
+            Text("Back").onTapGesture {
+                navigation.pop(to: .previous)
+                    
+            }
+            .padding(8)
+            .border(.red, width: 2)
+            
+            
+            ring.stroke(Color.red, lineWidth: 6.0)
                 .frame(width: 200, height: 200)
                 .padding(40)
-                .animation(self.stopAnimation ? nil : .easeIn(duration: 0.1))
+                .animation(self.stopAnimation ? nil : .linear(duration: 1))
             HStack {
                 Button(action: {
                     self.stopAnimation = false
-                    self.countdownTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
+                    self.countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
                         guard self.animationDuration > 0 else {
                             self.countdownTimer?.invalidate()
                             return
                         }
                         self.fillPoint = self.animationDuration/10
-                        self.animationDuration -= 0.1
+                        self.animationDuration -= 1
                     })
                 }) {
                     Text("Start")
@@ -62,9 +76,9 @@ struct Ring: Shape {
 
     var path = Path()
 
-    path.addArc(center: CGPoint(x: rect.size.width / 2,
-                                y: rect.size.height / 2),
-                radius: rect.size.width / 2,
+    path.addArc(center: CGPoint(x: rect.size.width / 3,
+                                y: rect.size.height / 3),
+                radius: rect.size.width / 3,
                 startAngle: .degrees(startArcAngle - 90),
                 endAngle: .degrees(endArcAngle - 90),
                 clockwise: true)

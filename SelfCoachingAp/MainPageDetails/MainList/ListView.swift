@@ -1,4 +1,4 @@
-
+// delete
 import SwiftUI
 import iOSDevPackage
 import Firebase
@@ -63,8 +63,9 @@ struct ListView: View {
                     .onTapGesture {
                         switch item.id {
                         case 0:
-                            navigation.push(BreathView()
-                                                .environmentObject(BreathViewModel()))
+                            navigation.pop(to: .previous)
+//                            navigation.push(BreathView(stateObject: )
+//                                                .environmentObject(BreathViewModel()))
                         case 1: navigation.push(QuestionOfDayView())
                         case 2: navigation.push(ImportentBusinessView())
                         case 3:

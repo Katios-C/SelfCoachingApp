@@ -9,7 +9,7 @@ struct StillBRCircle: View {
     
    // var startButton = StartButtonBreath(isStarted: false)
     var timerView = TimerView()
-    var stillExView = StillExView()
+ //   var stillExView = StillExView()
     @State private var  stopAnimation = true
     @State private var countdownTimer: Timer?
     
@@ -272,3 +272,7 @@ struct ClockCircle: View {
 let timer = Timer
     .publish(every: 1, on: .main, in: .common)
     .autoconnect()
+
+let timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+    print("FIRE!!!")
+})

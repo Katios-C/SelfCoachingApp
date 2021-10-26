@@ -252,17 +252,17 @@ Text(text)
 //        }
 //
 //    }
-    .onReceive(timerViewModelShared.timerForText){_ in
-        if isAnimating {
-        if timerViewModelShared.secondsElapsed > 0 {
-              text = timerViewModelShared.changeText()
-               //   text = "раз"
-          }
-              else {
-                  timerViewModelShared.stoptimerForText()
-              }
-        }
-    }
+//    .onReceive(timerViewModelShared.timerForText){_ in
+//        if isAnimating {
+//        if timerViewModelShared.secondsElapsed > 0 {
+//              text = timerViewModelShared.changeText()
+//               //   text = "раз"
+//          }
+//              else {
+//                  timerViewModelShared.stoptimerForText()
+//              }
+//        }
+//    }
 }
 }
 }
