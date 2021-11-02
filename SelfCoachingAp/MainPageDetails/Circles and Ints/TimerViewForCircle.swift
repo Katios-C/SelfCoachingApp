@@ -3,9 +3,8 @@ import SwiftUI
 struct TimerViewForCircle: View {
   
     @StateObject var stateObject:  fourCirclesViewModel
-    
-  //  @State var timeRemaining = 5
- //   let timerS = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+  //  @State var start = 0
+ 
     
     var body: some View {
         
@@ -15,13 +14,21 @@ struct TimerViewForCircle: View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .foregroundColor(.green)
             .background(Color.gray)
-          //  .opacity(0.2)
+        
             .grayscale(2)
             .onReceive(timer){ _ in
                           if stateObject.totaltime > 0 {
                               stateObject.totaltime -= 1
                           }
                       }
+        
+        Text("\(stateObject.start)")
+            .onReceive(timer) { _ in
+                if stateObject.totaltime > 0 {
+                stateObject.start += 1
+                
+            }
+            }
     }
     
     //Convert the time into 24hr (24:00:00) format

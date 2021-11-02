@@ -270,9 +270,11 @@ struct ClockCircle: View {
 
 
 let timer = Timer
-    .publish(every: 1, on: .main, in: .common)
+    .publish(every: 1, on: .main,  in: .common)
     .autoconnect()
 
-let timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-    print("FIRE!!!")
-})
+
+
+//let timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+//    print("FIRE!!!")
+//})

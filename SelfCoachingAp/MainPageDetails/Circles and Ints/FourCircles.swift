@@ -1,9 +1,3 @@
-//
-//  FourCircles.swift
-//  SelfCoachingAp
-//
-//  Created by Екатерина Чернова on 19.10.2021.
-//
 
 import SwiftUI
 import iOSDevPackage
@@ -31,9 +25,8 @@ struct FourCircles: View {
                 .navigationTitle("Home")
                 Spacer()
                 
-                
-                //               Image(systemName: "square.grid.3x3.fill")
-                //   Image(systemName: "line.3.horizontal.circle.fill")
+                Image (systemName: "speaker.slash")
+                Image (systemName: "speaker.slash.fill")
                 Image(systemName: "ellipsis")
                     .font(.title2)
                     .foregroundColor(.gray)
@@ -55,6 +48,15 @@ struct FourCircles: View {
             CircleHold2(stateObject: stateObject)
         }
             Spacer()
+             TikTak()
+            Spacer()
+            
+//            VStack {
+//                 Text(String(describing: stateObject.first))
+//                 Text(String(describing: stateObject.second))
+//               }
+//               .onAppear { stateObject.starT() }
+//               .onDisappear { stateObject.stoP() }
             
             
             Button(action: {
@@ -65,11 +67,10 @@ struct FourCircles: View {
                     TimerViewForCircle(stateObject: stateObject)
                         .padding()
                 HStack {
-//                        Image(systemName: "trash")
-//                            .font(.title)
+//
                     Text("Повторить")
                         .fontWeight(.semibold)
-                       // .font(.title)
+                     
 
                 }
                 .padding()
@@ -103,6 +104,7 @@ struct FourCircles: View {
 }
 
 }
+        
 }
 
 }

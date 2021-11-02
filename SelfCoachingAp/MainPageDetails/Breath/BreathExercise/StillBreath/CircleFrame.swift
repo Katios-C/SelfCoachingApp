@@ -76,9 +76,9 @@ struct Ring: Shape {
 
     var path = Path()
 
-    path.addArc(center: CGPoint(x: rect.size.width / 3,
-                                y: rect.size.height / 3),
-                radius: rect.size.width / 3,
+    path.addArc(center: CGPoint(x: rect.size.width / 2,
+                                y: rect.size.height / 2),
+                radius: rect.size.width / 2,
                 startAngle: .degrees(startArcAngle - 90),
                 endAngle: .degrees(endArcAngle - 90),
                 clockwise: true)

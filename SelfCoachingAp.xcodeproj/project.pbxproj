@@ -54,6 +54,10 @@
 		951084FB26DF8DF70092BA5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084FA26DF8DF70092BA5B /* TimerView.swift */; };
 		95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D3927227388008B8AC6 /* TimerViewForCircle.swift */; };
 		95153D3D272673A8008B8AC6 /* RectangleBreath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D3C272673A8008B8AC6 /* RectangleBreath.swift */; };
+		95153D4027281122008B8AC6 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D3F27281122008B8AC6 /* Ring.swift */; };
+		95153D422728131D008B8AC6 /* RectBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D412728131D008B8AC6 /* RectBreathView.swift */; };
+		95153D44272815BE008B8AC6 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D43272815BE008B8AC6 /* TriangleView.swift */; };
+		95153D46272820A6008B8AC6 /* ThreeLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D45272820A6008B8AC6 /* ThreeLines.swift */; };
 		951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */; };
 		951A1F0026D38669004A5F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFF26D38669004A5F46 /* ContentView.swift */; };
 		951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0126D3866B004A5F46 /* Assets.xcassets */; };
@@ -71,6 +75,15 @@
 		9535FB9C26F0BAFF0026C5DE /* ResolverDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9B26F0BAFF0026C5DE /* ResolverDI.swift */; };
 		9535FB9E26F1FE360026C5DE /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9D26F1FE350026C5DE /* CircleFrame.swift */; };
 		9535FBA026F46BC60026C5DE /* OnlyCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB9F26F46BC60026C5DE /* OnlyCircle.swift */; };
+		9584D9BD272911E800012A07 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9584D9BC272911E800012A07 /* Lottie */; };
+		9584D9BF2729127E00012A07 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9BE2729127E00012A07 /* LottieView.swift */; };
+		9584D9C22729196B00012A07 /* blender.json in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9C12729196B00012A07 /* blender.json */; };
+		9584D9E6272930AB00012A07 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9E5272930AB00012A07 /* loading.json */; };
+		9584D9E82729377A00012A07 /* inhexh.json in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9E72729377A00012A07 /* inhexh.json */; };
+		9584D9EA272939E700012A07 /* inhexh2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9E9272939E700012A07 /* inhexh2.json */; };
+		9584D9EC27294CA100012A07 /* breath.json in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9EB27294CA100012A07 /* breath.json */; };
+		9584D9F1272F9C1700012A07 /* tiktak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9F0272F9C1700012A07 /* tiktak.swift */; };
+		9584D9F3272F9E4800012A07 /* tiktak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9F2272F9E4800012A07 /* tiktak.mp3 */; };
 		95AA0F2C270DB59000865891 /* TAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA0F2B270DB59000865891 /* TAnimation.swift */; };
 		95B3097D26D61B9A00B672D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3097C26D61B9A00B672D4 /* AppDelegate.swift */; };
 		95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */; };
@@ -131,6 +144,10 @@
 		951084FA26DF8DF70092BA5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		95153D3927227388008B8AC6 /* TimerViewForCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewForCircle.swift; sourceTree = "<group>"; };
 		95153D3C272673A8008B8AC6 /* RectangleBreath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBreath.swift; sourceTree = "<group>"; };
+		95153D3F27281122008B8AC6 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		95153D412728131D008B8AC6 /* RectBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectBreathView.swift; sourceTree = "<group>"; };
+		95153D43272815BE008B8AC6 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		95153D45272820A6008B8AC6 /* ThreeLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeLines.swift; sourceTree = "<group>"; };
 		951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfCoachingAp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCoachingApApp.swift; sourceTree = "<group>"; };
 		951A1EFF26D38669004A5F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +166,14 @@
 		9535FB9B26F0BAFF0026C5DE /* ResolverDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverDI.swift; sourceTree = "<group>"; };
 		9535FB9D26F1FE350026C5DE /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
 		9535FB9F26F46BC60026C5DE /* OnlyCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCircle.swift; sourceTree = "<group>"; };
+		9584D9BE2729127E00012A07 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		9584D9C12729196B00012A07 /* blender.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
+		9584D9E5272930AB00012A07 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		9584D9E72729377A00012A07 /* inhexh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inhexh.json; sourceTree = "<group>"; };
+		9584D9E9272939E700012A07 /* inhexh2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inhexh2.json; sourceTree = "<group>"; };
+		9584D9EB27294CA100012A07 /* breath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breath.json; sourceTree = "<group>"; };
+		9584D9F0272F9C1700012A07 /* tiktak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiktak.swift; sourceTree = "<group>"; };
+		9584D9F2272F9E4800012A07 /* tiktak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiktak.mp3; sourceTree = "<group>"; };
 		95AA0F2B270DB59000865891 /* TAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimation.swift; sourceTree = "<group>"; };
 		95B3097C26D61B9A00B672D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -171,6 +196,7 @@
 				950EF30F26E2174E0012B2CF /* Realm in Frameworks */,
 				9535FB9A26F0BAE20026C5DE /* Resolver in Frameworks */,
 				DE7BFDE20C48A830368667E7 /* Pods_SelfCoachingAp.framework in Frameworks */,
+				9584D9BD272911E800012A07 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +206,7 @@
 		950D8898271E9CD00014F756 /* Circles and Ints */ = {
 			isa = PBXGroup;
 			children = (
+				951084E326DCCD550092BA5B /* StillExView.swift */,
 				950D8894271D869D0014F756 /* CircleInhale.swift */,
 				950D8899271E9D0C0014F756 /* CircleHold1.swift */,
 				950D88A1271EBACB0014F756 /* CircleHold2.swift */,
@@ -188,6 +215,7 @@
 				950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */,
 				950D88A327200F620014F756 /* Container.swift */,
 				95153D3927227388008B8AC6 /* TimerViewForCircle.swift */,
+				950F13992713F85E00E82A8A /* MainTriangle.swift */,
 			);
 			path = "Circles and Ints";
 			sourceTree = "<group>";
@@ -256,6 +284,7 @@
 				95BBCC0F26E6337800A4A7B8 /* SceneDelegate.swift */,
 				95B3097C26D61B9A00B672D4 /* AppDelegate.swift */,
 				95BBCC1126E635CA00A4A7B8 /* Minutes.swift */,
+				9584D9BE2729127E00012A07 /* LottieView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -321,7 +350,6 @@
 			children = (
 				951A1F1626D3C31B004A5F46 /* ListView.swift */,
 				951A1F1826D4A9D6004A5F46 /* RectangleView.swift */,
-				950F13992713F85E00E82A8A /* MainTriangle.swift */,
 			);
 			path = MainList;
 			sourceTree = "<group>";
@@ -366,11 +394,14 @@
 		95153D3B27267241008B8AC6 /* Triangle Animation */ = {
 			isa = PBXGroup;
 			children = (
-				951084E326DCCD550092BA5B /* StillExView.swift */,
 				950F139727100D0500E82A8A /* TriangleTimer.swift */,
+				95153D43272815BE008B8AC6 /* TriangleView.swift */,
 				95AA0F2B270DB59000865891 /* TAnimation.swift */,
 				95153D3C272673A8008B8AC6 /* RectangleBreath.swift */,
 				951084F826DF0CEA0092BA5B /* TimerViewModel.swift */,
+				95153D3F27281122008B8AC6 /* Ring.swift */,
+				95153D412728131D008B8AC6 /* RectBreathView.swift */,
+				95153D45272820A6008B8AC6 /* ThreeLines.swift */,
 			);
 			path = "Triangle Animation";
 			sourceTree = "<group>";
@@ -378,6 +409,7 @@
 		951A1EF126D38669004A5F46 = {
 			isa = PBXGroup;
 			children = (
+				9584D9ED272F9B7100012A07 /* audio */,
 				951A1EFC26D38669004A5F46 /* SelfCoachingAp */,
 				951A1EFB26D38669004A5F46 /* Products */,
 				E8C254B38B905D18F8A88F19 /* Pods */,
@@ -396,6 +428,7 @@
 		951A1EFC26D38669004A5F46 /* SelfCoachingAp */ = {
 			isa = PBXGroup;
 			children = (
+				9584D9C02729192800012A07 /* Lottie */,
 				950EF30326E1DDDE0012B2CF /* CoreData */,
 				951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */,
 				951A1F0626D3866B004A5F46 /* Info.plist */,
@@ -448,6 +481,27 @@
 			path = AppleSignIN;
 			sourceTree = "<group>";
 		};
+		9584D9C02729192800012A07 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				9584D9E72729377A00012A07 /* inhexh.json */,
+				9584D9EB27294CA100012A07 /* breath.json */,
+				9584D9E9272939E700012A07 /* inhexh2.json */,
+				9584D9E5272930AB00012A07 /* loading.json */,
+				9584D9C12729196B00012A07 /* blender.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		9584D9ED272F9B7100012A07 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				9584D9F0272F9C1700012A07 /* tiktak.swift */,
+				9584D9F2272F9E4800012A07 /* tiktak.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		95AA0F2A270DB53000865891 /* Timer and Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +551,7 @@
 				950EF30C26E2174E0012B2CF /* RealmSwift */,
 				950EF30E26E2174E0012B2CF /* Realm */,
 				9535FB9926F0BAE20026C5DE /* Resolver */,
+				9584D9BC272911E800012A07 /* Lottie */,
 			);
 			productName = SelfCoachingAp;
 			productReference = 951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */;
@@ -529,6 +584,7 @@
 				951A1F4626D503C7004A5F46 /* XCRemoteSwiftPackageReference "iosdevpackage" */,
 				950EF30B26E2174E0012B2CF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				9535FB9826F0BAE20026C5DE /* XCRemoteSwiftPackageReference "Resolver" */,
+				9584D9BB272911E700012A07 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 951A1EFB26D38669004A5F46 /* Products */;
 			projectDirPath = "";
@@ -544,9 +600,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9584D9E82729377A00012A07 /* inhexh.json in Resources */,
+				9584D9EC27294CA100012A07 /* breath.json in Resources */,
 				951A1F0526D3866B004A5F46 /* Preview Assets.xcassets in Resources */,
 				951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */,
 				95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */,
+				9584D9EA272939E700012A07 /* inhexh2.json in Resources */,
+				9584D9E6272930AB00012A07 /* loading.json in Resources */,
+				9584D9F3272F9E4800012A07 /* tiktak.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +676,7 @@
 				951084C926D87C270092BA5B /* StillBreathView.swift in Sources */,
 				950D88A427200F620014F756 /* Container.swift in Sources */,
 				951084EC26DCFCEF0092BA5B /* ProgressCircle.swift in Sources */,
+				95153D44272815BE008B8AC6 /* TriangleView.swift in Sources */,
 				950F139C2714236700E82A8A /* MiniCircles.swift in Sources */,
 				950D889A271E9D0C0014F756 /* CircleHold1.swift in Sources */,
 				950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */,
@@ -622,12 +684,15 @@
 				951A1F1726D3C31B004A5F46 /* ListView.swift in Sources */,
 				9535FBA026F46BC60026C5DE /* OnlyCircle.swift in Sources */,
 				95B3098126D64E6E00B672D4 /* Login.swift in Sources */,
+				9584D9BF2729127E00012A07 /* LottieView.swift in Sources */,
 				950D8895271D869D0014F756 /* CircleInhale.swift in Sources */,
 				951084EE26DDCF530092BA5B /* FlowerBrathView.swift in Sources */,
 				951084B626D78D6C0092BA5B /* ScaleView.swift in Sources */,
 				951084F226DDDF970092BA5B /* Flower2Content.swift in Sources */,
 				95AA0F2C270DB59000865891 /* TAnimation.swift in Sources */,
 				951084CF26D88F780092BA5B /* BreathStartPageView.swift in Sources */,
+				95153D4027281122008B8AC6 /* Ring.swift in Sources */,
+				95153D422728131D008B8AC6 /* RectBreathView.swift in Sources */,
 				951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */,
 				950D88A0271EB6F10014F756 /* CircleExhale.swift in Sources */,
 				95BBCC1026E6337800A4A7B8 /* SceneDelegate.swift in Sources */,
@@ -636,6 +701,7 @@
 				9535FB9726F092030026C5DE /* StartButtonBreath.swift in Sources */,
 				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,
 				950EF31226E218E00012B2CF /* BreathDB.swift in Sources */,
+				9584D9F1272F9C1700012A07 /* tiktak.swift in Sources */,
 				95153D3D272673A8008B8AC6 /* RectangleBreath.swift in Sources */,
 				951084F626DDF69F0092BA5B /* StillCircleBreath.swift in Sources */,
 				951084C726D7A8B90092BA5B /* BreathCaruselView.swift in Sources */,
@@ -644,6 +710,7 @@
 				95B3098326D658DF00B672D4 /* LoginViewModel.swift in Sources */,
 				951A1F1926D4A9D6004A5F46 /* RectangleView.swift in Sources */,
 				951084B826D78DA00092BA5B /* SleepView.swift in Sources */,
+				9584D9C22729196B00012A07 /* blender.json in Sources */,
 				950D88A2271EBACB0014F756 /* CircleHold2.swift in Sources */,
 				951084CD26D88AD80092BA5B /* BreathViewModel.swift in Sources */,
 				951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */,
@@ -662,6 +729,7 @@
 				951084EA26DCEC560092BA5B /* ProgressBar.swift in Sources */,
 				951084B426D78BC00092BA5B /* ImportentBusinessView.swift in Sources */,
 				950EF30626E1DEA10012B2CF /* CoreDataModelBreath.xcdatamodeld in Sources */,
+				95153D46272820A6008B8AC6 /* ThreeLines.swift in Sources */,
 				950EF30826E1F6CC0012B2CF /* PersistenceController.swift in Sources */,
 				9535FB9C26F0BAFF0026C5DE /* ResolverDI.swift in Sources */,
 				95BBCC1626E637C000A4A7B8 /* Minutes+CoreDataClass.swift in Sources */,
@@ -887,6 +955,14 @@
 				minimumVersion = 1.4.4;
 			};
 		};
+		9584D9BB272911E700012A07 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -909,6 +985,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9535FB9826F0BAE20026C5DE /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		9584D9BC272911E800012A07 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9584D9BB272911E700012A07 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 

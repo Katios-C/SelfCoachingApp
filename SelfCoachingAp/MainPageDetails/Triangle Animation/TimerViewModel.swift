@@ -1,14 +1,21 @@
-
+import SwiftUI
 import Foundation
 
 class TimerViewModel: ObservableObject {
     
    // @Published var secondsElapsed = 29
     
-      @Published  var timer = Timer()
+    @Published  var timer = Timer()
     @Published var mode: stopWatchMode = .stopped
     var counter: Int = 0
      var breath = ["Выдох", "Задержка"]
+    @Published var isActive = false
+    
+    @Published var inhale = UserDefaults.standard.integer(forKey: "inhale")
+    
+    @Published var defaultTimeRemain: CGFloat  = CGFloat ( UserDefaults.standard.integer(forKey: "inhale") + UserDefaults.standard.integer(forKey: "hold1") + UserDefaults.standard.integer(forKey: "exhale") + UserDefaults.standard.integer(forKey: "hold2"))
+    @Published var timeRemain: CGFloat  = CGFloat ( UserDefaults.standard.integer(forKey: "inhale") + UserDefaults.standard.integer(forKey: "hold1") + UserDefaults.standard.integer(forKey: "exhale") + UserDefaults.standard.integer(forKey: "hold2"))
+    
     
   //  @Published var isAnimated = false
     

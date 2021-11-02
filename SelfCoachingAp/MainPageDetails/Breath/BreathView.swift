@@ -50,7 +50,7 @@ struct BreathView: View {
                     .onTapGesture {
                        
                         switch breathViewModelShared.playingSubj {
-                        case "Спокойствие" : navigation.push(StillExView(stateObject: stateObject))
+//                        case "Спокойствие" : navigation.push(StillExView(stateObject: stateObject))
                         case "Концентрация": navigation.push(ConcentrateEx())
                             
                         default:
