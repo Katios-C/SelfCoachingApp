@@ -17,8 +17,6 @@ class fourCirclesViewModel: ObservableObject {
 
     
     @Published var totaltime = 0
-  
-    
      var audioPlayer: AVAudioPlayer!
 
     

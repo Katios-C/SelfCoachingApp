@@ -13,13 +13,11 @@
 		950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */; };
 		950D88A0271EB6F10014F756 /* CircleExhale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889F271EB6F10014F756 /* CircleExhale.swift */; };
 		950D88A2271EBACB0014F756 /* CircleHold2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D88A1271EBACB0014F756 /* CircleHold2.swift */; };
-		950D88A427200F620014F756 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D88A327200F620014F756 /* Container.swift */; };
 		950EF30D26E2174E0012B2CF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950EF30C26E2174E0012B2CF /* RealmSwift */; };
 		950EF30F26E2174E0012B2CF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 950EF30E26E2174E0012B2CF /* Realm */; };
 		950F139A2713F85F00E82A8A /* MainTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F13992713F85E00E82A8A /* MainTriangle.swift */; };
 		951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */; };
 		951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */; };
-		951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */; };
 		951084E426DCCD550092BA5B /* StillExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E326DCCD550092BA5B /* StillExView.swift */; };
 		95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D3927227388008B8AC6 /* TimerViewForCircle.swift */; };
 		951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */; };
@@ -47,11 +45,9 @@
 		950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCirclesViewModel.swift; sourceTree = "<group>"; };
 		950D889F271EB6F10014F756 /* CircleExhale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleExhale.swift; sourceTree = "<group>"; };
 		950D88A1271EBACB0014F756 /* CircleHold2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleHold2.swift; sourceTree = "<group>"; };
-		950D88A327200F620014F756 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		950F13992713F85E00E82A8A /* MainTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTriangle.swift; sourceTree = "<group>"; };
 		951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetalsView.swift; sourceTree = "<group>"; };
 		951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTemplateForDetalView.swift; sourceTree = "<group>"; };
-		951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotomTemplateDetalView.swift; sourceTree = "<group>"; };
 		951084E326DCCD550092BA5B /* StillExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillExView.swift; sourceTree = "<group>"; };
 		95153D3927227388008B8AC6 /* TimerViewForCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewForCircle.swift; sourceTree = "<group>"; };
 		951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfCoachingAp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +94,6 @@
 				950D889F271EB6F10014F756 /* CircleExhale.swift */,
 				950D889B271E9D470014F756 /* FourCircles.swift */,
 				950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */,
-				950D88A327200F620014F756 /* Container.swift */,
 				95153D3927227388008B8AC6 /* TimerViewForCircle.swift */,
 				950F13992713F85E00E82A8A /* MainTriangle.swift */,
 			);
@@ -128,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */,
-				951084C126D7996C0092BA5B /* BotomTemplateDetalView.swift */,
 				9535FB8D26E9B1BC0026C5DE /* Button.swift */,
 			);
 			path = SingleViews;
@@ -342,11 +336,9 @@
 				951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */,
 				95B3097D26D61B9A00B672D4 /* AppDelegate.swift in Sources */,
 				95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */,
-				950D88A427200F620014F756 /* Container.swift in Sources */,
 				950D889A271E9D0C0014F756 /* CircleHold1.swift in Sources */,
 				950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */,
 				950D8895271D869D0014F756 /* CircleInhale.swift in Sources */,
-				951084C226D7996C0092BA5B /* BotomTemplateDetalView.swift in Sources */,
 				950D88A0271EB6F10014F756 /* CircleExhale.swift in Sources */,
 				95BBCC1026E6337800A4A7B8 /* SceneDelegate.swift in Sources */,
 				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,

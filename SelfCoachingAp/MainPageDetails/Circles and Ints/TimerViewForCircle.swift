@@ -1,11 +1,8 @@
 import SwiftUI
 
 struct TimerViewForCircle: View {
-  
+    
     @StateObject var stateObject:  fourCirclesViewModel
-    @State var start = 5
-    
-    
     
     var body: some View {
         
@@ -14,20 +11,18 @@ struct TimerViewForCircle: View {
             .frame(height: 40.0)
             .frame(minWidth: 0, maxWidth: .infinity)
             .foregroundColor(.gray)
-           // .background(Color.gray)
             .opacity(0.2)
-            //  .grayscale(2)
             .onReceive(timer){ _ in
-              
-                          if stateObject.totaltime > 0 {
-                              stateObject.totaltime -= 1
-                          }
-                      }
-
+                
+                if stateObject.totaltime > 0 {
+                    stateObject.totaltime -= 1
+                }
+            }
+        
     }
-
+    
     func timeString(time: Int) -> String {
-       // let hours   = Int(time) / 3600
+        // let hours   = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i", minutes, seconds)
