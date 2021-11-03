@@ -36,17 +36,14 @@ struct CircleHold2: View {
                              stateObject.exhaleEnds = false
                           //  stateObject.hold2Ends = true
                                
-       //
-       //                       stateObject.inhaleProgress = 0
-       //                      stateObject.hold1Progress = 0
-       //                    stateObject.exhaleProgress = 0
-       //                      stateObject.hold2Progress = 0
 
                                stateObject.inhale = UserDefaults.standard.integer(forKey: "inhale")
                                
                               stateObject.hold1 = UserDefaults.standard.integer(forKey: "hold1")
                            stateObject.exhale = UserDefaults.standard.integer(forKey: "exhale")
                               stateObject.hold2 = UserDefaults.standard.integer(forKey: "hold2")
+                               
+                             //  stateObject.totaltime = UserDefaults.standard.integer(forKey: "inputTime")
                               // timer4.upstream.connect().cancel()
                            }
                            
@@ -54,11 +51,6 @@ struct CircleHold2: View {
         }
     }
            }
-//        .onAppear {
-//            percent = stateObject.progressResult(whatBreath: stateObject.hold1)
-//            print("PERCENT")
-//            print(percent)
-//        }
              
 }
 

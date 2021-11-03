@@ -5,9 +5,9 @@ import iOSDevPackage
 struct StillExView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     @StateObject var stateObject:  fourCirclesViewModel
-    @StateObject var timerStateObject:  TimerViewModel
+   // @StateObject var timerStateObject:  TimerViewModel
     
-    let persistenceController = PersistenceController.shared
+   // let persistenceController = PersistenceController.shared
     @State var counter: Int = 0
       var countTo: Int = 300
     @State var isPlay = false
@@ -51,7 +51,7 @@ struct StillExView: View {
 //                StartButtonBreath(isStarted: $isStarted)
 //            }
    
-            TriangleTimer(stateObject: timerStateObject)
+          //  TriangleTimer(stateObject: timerStateObject)
                 
             Spacer()
             TimerViewForCircle(stateObject: stateObject)

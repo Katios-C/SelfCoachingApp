@@ -7,20 +7,15 @@ import AuthenticationServices
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObject
-    @AppStorage("log_status") var log_Status = false
+  //  @AppStorage("log_status") var log_Status = false
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
    
     
     var body: some View {
        
-        if log_Status{
-           // ListView()
             MainTriangle()
-                .environmentObject(UIStateModel())
-                
-        } else {
-            Login()
-        }
+              //  .environmentObject(UIStateModel())
+
     }
     
     

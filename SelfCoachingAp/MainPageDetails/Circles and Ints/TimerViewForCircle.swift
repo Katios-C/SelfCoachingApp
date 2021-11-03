@@ -3,35 +3,29 @@ import SwiftUI
 struct TimerViewForCircle: View {
   
     @StateObject var stateObject:  fourCirclesViewModel
-  //  @State var start = 0
- 
+    @State var start = 5
+    
+    
     
     var body: some View {
         
         Text("\(timeString(time: stateObject.totaltime))")
-            .font(.system(size: 30))
+            .font(.system(size: 50))
             .frame(height: 40.0)
             .frame(minWidth: 0, maxWidth: .infinity)
-            .foregroundColor(.green)
-            .background(Color.gray)
-        
-            .grayscale(2)
+            .foregroundColor(.gray)
+           // .background(Color.gray)
+            .opacity(0.2)
+            //  .grayscale(2)
             .onReceive(timer){ _ in
+              
                           if stateObject.totaltime > 0 {
                               stateObject.totaltime -= 1
                           }
                       }
-        
-        Text("\(stateObject.start)")
-            .onReceive(timer) { _ in
-                if stateObject.totaltime > 0 {
-                stateObject.start += 1
-                
-            }
-            }
+
     }
-    
-    //Convert the time into 24hr (24:00:00) format
+
     func timeString(time: Int) -> String {
        // let hours   = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
