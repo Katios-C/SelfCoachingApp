@@ -9,6 +9,15 @@
           "revision": "566d1f3c947f1765cdb7ea2cdd06597ee5141d32",
           "version": "1.0.1"
         }
+      },
+      {
+        "package": "Resolver",
+        "repositoryURL": "https://github.com/hmlongco/Resolver",
+        "state": {
+          "branch": null,
+          "revision": "97de0b0320036607564af4a60025b48f8d041221",
+          "version": "1.5.0"
+        }
       }
     ]
   },

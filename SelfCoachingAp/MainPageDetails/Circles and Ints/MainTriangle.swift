@@ -1,7 +1,7 @@
 
 import SwiftUI
 import iOSDevPackage
-import Firebase
+
 import Combine
 
 struct MainTriangle: View {
