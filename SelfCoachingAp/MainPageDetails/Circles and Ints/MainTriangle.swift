@@ -56,7 +56,7 @@ struct MainTriangle: View {
                                 .fill(Color.yellow)
                                 .grayscale(2)
                                 .frame(width: 70, height: 70)
-                            Picker("InputTome", selection: $inputTime) {
+                            Picker("\(inputTime)", selection: $inputTime) {
                                 ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
                                     
@@ -81,7 +81,7 @@ struct MainTriangle: View {
                                     .fill(Color.yellow)
                                     .grayscale(2)
                                     .frame(width: 70, height: 70)
-                                Picker("Inhale", selection: $inhale) {
+                                Picker( "\(inhale)", selection: $inhale) {
                                     
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
@@ -102,7 +102,7 @@ struct MainTriangle: View {
                                     .fill(Color.yellow)
                                     .grayscale(2)
                                     .frame(width: 70, height: 70)
-                                Picker("Inhale", selection: $hold1) {
+                                Picker("\(hold1)", selection: $hold1) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
                                         
@@ -123,7 +123,7 @@ struct MainTriangle: View {
                                     .fill(Color.yellow)
                                     .grayscale(2)
                                     .frame(width: 70, height: 70)
-                                Picker("Inhale", selection: $exhale) {
+                                Picker("\(exhale)", selection: $exhale) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
                                         
@@ -144,7 +144,7 @@ struct MainTriangle: View {
                                     .fill(Color.yellow)
                                     .grayscale(2)
                                     .frame(width: 70, height: 70)
-                                Picker("Inhale", selection: $hold2) {
+                                Picker("\(hold2)", selection: $hold2) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
                                         

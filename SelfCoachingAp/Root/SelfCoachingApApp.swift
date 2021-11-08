@@ -5,7 +5,7 @@ import iOSDevPackage
 
 @main
 struct SelfCoachingApApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+  //  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     
     var body: some Scene {

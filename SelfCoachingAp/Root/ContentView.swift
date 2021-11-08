@@ -3,7 +3,7 @@ import iOSDevPackage
 
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var managedObject
+   // @Environment(\.managedObjectContext) var managedObject
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
