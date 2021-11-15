@@ -1,7 +1,7 @@
 import SwiftUI
 import AVKit
 struct TikTak: View {
-    @StateObject var stateObject:  fourCirclesViewModel
+    @StateObject var stateObject:  FourCirclesViewModel
     @State var isPlay = false
     
     var body: some View {
@@ -31,9 +31,7 @@ struct TikTak: View {
         }
         
         .onAppear {
-            
-            let sound = Bundle.main.path(forResource: "tiktak", ofType: "mp3")
-            stateObject.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            stateObject.playTikTak()
         }
     }
 }

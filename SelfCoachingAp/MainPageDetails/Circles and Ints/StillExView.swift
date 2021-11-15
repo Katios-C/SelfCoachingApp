@@ -4,7 +4,7 @@ import iOSDevPackage
 
 struct StillExView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
-    @StateObject var stateObject:  fourCirclesViewModel
+    @StateObject var stateObject:  FourCirclesViewModel
     
     
     var body: some View {

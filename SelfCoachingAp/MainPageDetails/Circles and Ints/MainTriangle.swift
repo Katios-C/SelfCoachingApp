@@ -7,7 +7,7 @@ import Combine
 struct MainTriangle: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    @StateObject var stateObject = fourCirclesViewModel()
+    @StateObject var stateObject = FourCirclesViewModel()
     
     @AppStorage("inhale") var inhale =  0
     @AppStorage("hold1")  var  hold1 = 0
@@ -16,7 +16,7 @@ struct MainTriangle: View {
     @AppStorage("inputTime") var inputTime = 0
     
     
-    @State private var showAlert: Bool = false
+   // @State private var showAlert: Bool = false
     
     
     var body: some View {
@@ -28,21 +28,28 @@ struct MainTriangle: View {
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack {
+                VStack {
                 HStack {
-                    Spacer()
-                    Image(systemName: "line.3.horizontal.circle.fill")
-                    
+                   Spacer()
+                    ZStack {
+                        Circle()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(Color.green)
+                            .opacity(0.5)
+                    Image(systemName: "ellipsis")
                         .font(.title2)
                         .foregroundColor(.gray)
+                        .rotationEffect(.degrees(90))
                         .onTapGesture {
                             navigation.push(PersonDetalsView())
                         }
+                    }
                     
+                }.padding(10)
+                
+                
+              //  Divider()
                 }
-                .padding()
-                
-                Divider()
-                
                 Spacer()
                 
                 VStack {
@@ -52,28 +59,33 @@ struct MainTriangle: View {
                         Text("Время тренировки в минутах")
                             .font(.footnote)
                         ZStack {
+                            
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color.yellow)
                                 .grayscale(2)
                                 .frame(width: 70, height: 70)
+                            
                             Picker("\(inputTime)", selection: $inputTime) {
                                 ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
-                                    
+                                      
                                 }
+                              
                             }.pickerStyle(.menu)
-                                .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                            .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             
+                               
+                               
                             
+                        }
+              
+                        .onTapGesture {
+                        
                         }
                     }
                     HStack {
-                        
-                        
                         VStack{
-                            
                             Text("вдох")
-                            
                                 .font(.footnote)
                             
                             ZStack {
@@ -85,16 +97,16 @@ struct MainTriangle: View {
                                     
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
-                                        
-                                        
                                     }
                                 }.pickerStyle(.menu)
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                    .frame(width: 70, height: 70)
+                                    
+                                    
                             }
                         }
                         
                         VStack{
-                            
                             Text("задержка")
                                 .font(.footnote)
                             ZStack {
@@ -110,7 +122,6 @@ struct MainTriangle: View {
                                 }.pickerStyle(.menu)
                                 
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                                
                             }
                         }
                         
@@ -160,19 +171,12 @@ struct MainTriangle: View {
                     HStack {
                         
                         Button(action: {
-                            stateObject.inhale = inhale
-                            stateObject.hold1 = hold1
-                            stateObject.exhale = exhale
-                            stateObject.hold2 = hold2
+          
+                            stateObject.intervalToAdjust(inhalE: inhale, holD1: hold1, exhalE: exhale, holD2: hold2)
                             
-                            
-                            if inhale > 0 && inputTime > 0 {
-                                stateObject.totaltime = inputTime * 60
+                            if stateObject.isNotNull(inhale:  inhale, inputTime: inputTime){
+
                                 navigation.push(FourCircles(stateObject: stateObject)) }
-                            else {
-                                showAlert = true
-                                
-                            }
                             
                         }){
                             
@@ -193,7 +197,7 @@ struct MainTriangle: View {
                             .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             
                         }
-                        .alert(isPresented: $showAlert, content: {
+                        .alert(isPresented: $stateObject.showAlert, content: {
                             Alert(title: Text("Внимание"),
                                   message: Text("Время вдоха и время тренировки должны быть больше 0"),
                                   dismissButton: .default(Text("OK"), action: {}))

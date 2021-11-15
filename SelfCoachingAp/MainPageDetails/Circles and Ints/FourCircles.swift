@@ -4,7 +4,7 @@ import iOSDevPackage
 
 struct FourCircles: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
-    @StateObject var stateObject:  fourCirclesViewModel
+    @StateObject var stateObject:  FourCirclesViewModel
     
     
     
@@ -29,6 +29,12 @@ struct FourCircles: View {
                 Spacer()
                 
                 TikTak(stateObject: stateObject)
+                
+                ZStack {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.green)
+                        .opacity(0.5)
                 Image(systemName: "ellipsis")
                     .font(.title2)
                     .foregroundColor(.gray)
@@ -37,11 +43,11 @@ struct FourCircles: View {
                         navigation.push(PersonDetalsView())
                     }
                 
-                
+                }
             }
             .padding()
             // .border(Color.green)
-            Divider()
+          //  Divider()
             Spacer()
             HStack(alignment:.center, spacing: 20) {
                 
@@ -56,27 +62,15 @@ struct FourCircles: View {
                             .frame(width: 60, height: 60)
                         
                         Text("\(stateObject.inhale)")
-                            .onReceive(timer) { time in
-                                
-                                
-                                print("\(stateObject.totaltime)")
-                                if stateObject.inhale  > 0   {
-                                    stateObject.inhale -= 1
-                                }
-                                
-                                //&& stateObject.totaltime > 0 && stateObject.inhale < stateObject.totaltime
-                                else if stateObject.inhale == 0 && stateObject.totaltime > 0
-                                {
-                                    
-                                    stateObject.inhaleEnds = true
-                                    
-                                }
+                            .onReceive(stateObject.timer) { time in
+                                stateObject.descendTime(time: &stateObject.inhale)
+                         
+                                stateObject.isEnd(breathTime: stateObject.inhale, endTime: &stateObject.inhaleEnds)
                             }
                     }
                     
                 }
                 
-                // here
                 
                 VStack {
                     
@@ -90,23 +84,15 @@ struct FourCircles: View {
                             .frame(width: 60, height: 60)
                         
                         Text("\(stateObject.hold1)")
-                            .onReceive(timer) { timer in
+                            .onReceive(stateObject.timer) { timer in
                                 
-                                if stateObject.hold1 > 0 && stateObject.inhaleEnds   {
-                                    stateObject.hold1 -= 1
-                                }
+                                stateObject.descendTime(time: &stateObject.hold1, previosEnd: stateObject.inhaleEnds)
                                 
-                                // && stateObject.totaltime > 0 && stateObject.hold1 < stateObject.totaltime
-                                
-                                else if stateObject.hold1 == 0 && stateObject.totaltime > 1 {
-                                    stateObject.hold1Ends = true
-                                }
+                                stateObject.isEnd(breathTime: stateObject.hold1, endTime: &stateObject.hold1Ends)
                             }
                     }
                 }
-                //
-                //            // here
-                //
+               
                 VStack {
                     Text("Выдох")
                         .opacity(stateObject.exhale == 0 ? 0.1 : 0.7)
@@ -120,21 +106,16 @@ struct FourCircles: View {
                             .grayscale(2)
                             .frame(width: 60, height: 60)
                         Text("\(stateObject.exhale)")
-                            .onReceive(timer) { time in
+                            .onReceive(stateObject.timer) { time in
+                                stateObject.descendTime(time: &stateObject.exhale, previosEnd: stateObject.hold1Ends)
                                 
-                                if stateObject.exhale > 0 && stateObject.hold1Ends  {
-                                    stateObject.exhale -= 1
-                                }
-                                //  && stateObject.totaltime > 0 && stateObject.exhale < stateObject.totaltime
-                                if stateObject.exhale == 0 && stateObject.totaltime > 0 {
-                                    stateObject.exhaleEnds = true
-                                }
+                                
+                                stateObject.isEnd(breathTime: stateObject.exhale, endTime: &stateObject.exhaleEnds)
+                              
                             }
                     }
                 }
                 
-                
-                //here
                 
                 VStack {
                     Text("Задержка")
@@ -148,27 +129,12 @@ struct FourCircles: View {
                         
                         
                         Text("\(stateObject.hold2)")
-                            .onReceive(timer) { time in
+                            .onReceive(stateObject.timer) { time in
+                              
+                                stateObject.descendTime(time: &stateObject.hold2, previosEnd: stateObject.exhaleEnds)
                                 
-                                if stateObject.hold2 > 0 && stateObject.exhale == 0  {
-                                    stateObject.hold2 -= 1
-                                }
-                                // && stateObject.hold2 < stateObject.totaltime
-                                else if stateObject.hold2 == 0 && stateObject.totaltime > 0 {
-                                    
-                                    
-                                    stateObject.inhaleEnds = false
-                                    stateObject.hold1Ends = false
-                                    stateObject.exhaleEnds = false
-                                    
-                                    
-                                    stateObject.inhale = UserDefaults.standard.integer(forKey: "inhale")
-                                    
-                                    stateObject.hold1 = UserDefaults.standard.integer(forKey: "hold1")
-                                    stateObject.exhale = UserDefaults.standard.integer(forKey: "exhale")
-                                    stateObject.hold2 = UserDefaults.standard.integer(forKey: "hold2")
-                                    
-                                }
+                                stateObject.fetchData()
+    
                             }
                     }
                 }
@@ -204,17 +170,7 @@ struct FourCircles: View {
                     .opacity(stateObject.totaltime > 0 ? 0 : 1)
                     .animation(.easeInOut(duration: 3))
                     .onTapGesture {
-                        stateObject.totaltime = UserDefaults.standard.integer(forKey: "inputTime") * 60
-                        
-                        stateObject.inhale = UserDefaults.standard.integer(forKey: "inhale")
-                        
-                        stateObject.hold1 = UserDefaults.standard.integer(forKey: "hold1")
-                        stateObject.exhale = UserDefaults.standard.integer(forKey: "exhale")
-                        stateObject.hold2 = UserDefaults.standard.integer(forKey: "hold2")
-                        
-                        stateObject.inhaleEnds = false
-                        stateObject.hold1Ends = false
-                        stateObject.exhaleEnds = false
+                        stateObject.restartPeriods()
                     }
                 }
             }
@@ -224,6 +180,3 @@ struct FourCircles: View {
 }
 
 
-let timer = Timer
-    .publish(every: 1, on: .main,  in: .common)
-    .autoconnect()

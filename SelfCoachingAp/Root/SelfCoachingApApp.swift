@@ -5,14 +5,17 @@ import iOSDevPackage
 
 @main
 struct SelfCoachingApApp: App {
-  //  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+    init() {
+        ServiceLocator.shared.addDependancy(object: FourCirclesViewModel())
+        ServiceLocator.shared.addDependancy(object: TestClass())
+    }
     
     var body: some Scene {
         WindowGroup {
             
             NavigationControllerView(transition: .custom(.opacity, .opacity)) {
-                ContentView()
+               // ContentView()
+                MainTriangle()
             }
         }
     }
