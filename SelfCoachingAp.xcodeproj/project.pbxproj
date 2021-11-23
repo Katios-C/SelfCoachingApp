@@ -10,6 +10,12 @@
 		950D889C271E9D470014F756 /* FourCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889B271E9D470014F756 /* FourCircles.swift */; };
 		950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */; };
 		950F139A2713F85F00E82A8A /* MainTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F13992713F85E00E82A8A /* MainTriangle.swift */; };
+		950F609227423E3E0009726F /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609127423E3E0009726F /* TimerManager.swift */; };
+		950F609427423E980009726F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609327423E980009726F /* TimerView.swift */; };
+		950F609827423FD80009726F /* LaunchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609727423FD80009726F /* LaunchTimer.swift */; };
+		950F609A2744D60E0009726F /* SingleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F60992744D60E0009726F /* SingleCircle.swift */; };
+		950F609C2744E9550009726F /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609B2744E9550009726F /* DispatchTimer.swift */; };
+		950F609E274502020009726F /* FourCircleDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609D274502020009726F /* FourCircleDispatch.swift */; };
 		951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */; };
 		951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */; };
 		951084E426DCCD550092BA5B /* StillExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E326DCCD550092BA5B /* StillExView.swift */; };
@@ -37,6 +43,12 @@
 		950D889B271E9D470014F756 /* FourCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCircles.swift; sourceTree = "<group>"; };
 		950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCirclesViewModel.swift; sourceTree = "<group>"; };
 		950F13992713F85E00E82A8A /* MainTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTriangle.swift; sourceTree = "<group>"; };
+		950F609127423E3E0009726F /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		950F609327423E980009726F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		950F609727423FD80009726F /* LaunchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTimer.swift; sourceTree = "<group>"; };
+		950F60992744D60E0009726F /* SingleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircle.swift; sourceTree = "<group>"; };
+		950F609B2744E9550009726F /* DispatchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
+		950F609D274502020009726F /* FourCircleDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCircleDispatch.swift; sourceTree = "<group>"; };
 		951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetalsView.swift; sourceTree = "<group>"; };
 		951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTemplateForDetalView.swift; sourceTree = "<group>"; };
 		951084E326DCCD550092BA5B /* StillExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillExView.swift; sourceTree = "<group>"; };
@@ -84,9 +96,23 @@
 				950D889B271E9D470014F756 /* FourCircles.swift */,
 				950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */,
 				95153D3927227388008B8AC6 /* TimerViewForCircle.swift */,
+				950F609D274502020009726F /* FourCircleDispatch.swift */,
 				950F13992713F85E00E82A8A /* MainTriangle.swift */,
+				950F609027423E250009726F /* TimerDispatch */,
 			);
 			path = "Circles and Ints";
+			sourceTree = "<group>";
+		};
+		950F609027423E250009726F /* TimerDispatch */ = {
+			isa = PBXGroup;
+			children = (
+				950F609127423E3E0009726F /* TimerManager.swift */,
+				950F609B2744E9550009726F /* DispatchTimer.swift */,
+				950F609327423E980009726F /* TimerView.swift */,
+				950F60992744D60E0009726F /* SingleCircle.swift */,
+				950F609727423FD80009726F /* LaunchTimer.swift */,
+			);
+			path = TimerDispatch;
 			sourceTree = "<group>";
 		};
 		951084D326D8D0A30092BA5B /* Root */ = {
@@ -270,18 +296,24 @@
 				9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */,
 				951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */,
 				95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */,
+				950F609827423FD80009726F /* LaunchTimer.swift in Sources */,
 				95E91D2C273CFFD500928460 /* AboutTimer.swift in Sources */,
 				950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */,
 				95E91D28273A4D1600928460 /* TestClass.swift in Sources */,
 				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,
+				950F609427423E980009726F /* TimerView.swift in Sources */,
 				9584D9F1272F9C1700012A07 /* Tiktak.swift in Sources */,
 				95E91D32273D044E00928460 /* AboutMe.swift in Sources */,
 				951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */,
+				950F609A2744D60E0009726F /* SingleCircle.swift in Sources */,
 				950F139A2713F85F00E82A8A /* MainTriangle.swift in Sources */,
+				950F609E274502020009726F /* FourCircleDispatch.swift in Sources */,
 				950D889C271E9D470014F756 /* FourCircles.swift in Sources */,
 				95E91D2E273D020E00928460 /* BreathSceme.swift in Sources */,
+				950F609C2744E9550009726F /* DispatchTimer.swift in Sources */,
 				95E91D30273D031200928460 /* Warning.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
+				950F609227423E3E0009726F /* TimerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

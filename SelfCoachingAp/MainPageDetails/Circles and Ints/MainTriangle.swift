@@ -6,7 +6,7 @@ import Combine
 
 struct MainTriangle: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
-    
+    let timerView = TimerManager()
     @StateObject var stateObject = FourCirclesViewModel()
     
     @AppStorage("inhale") var inhale =  0
@@ -176,7 +176,7 @@ struct MainTriangle: View {
                             
                             if stateObject.isNotNull(inhale:  inhale, inputTime: inputTime){
 
-                                navigation.push(FourCircles(stateObject: stateObject)) }
+                                navigation.push(FourCircleDispatch(stateObject: stateObject).environmentObject(timerView)) }
                             
                         }){
                             

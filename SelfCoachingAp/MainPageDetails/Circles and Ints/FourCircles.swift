@@ -63,9 +63,9 @@ struct FourCircles: View {
                         
                         Text("\(stateObject.inhale)")
                             .onReceive(stateObject.timer) { time in
-                                stateObject.descendTime(time: &stateObject.inhale)
-                         
-                                stateObject.isEnd(breathTime: stateObject.inhale, endTime: &stateObject.inhaleEnds)
+//                                stateObject.descendTime(time: &stateObject.inhale)
+//
+//                                stateObject.isEnd(breathTime: stateObject.inhale, endTime: &stateObject.inhaleEnds)
                             }
                     }
                     
@@ -86,9 +86,9 @@ struct FourCircles: View {
                         Text("\(stateObject.hold1)")
                             .onReceive(stateObject.timer) { timer in
                                 
-                                stateObject.descendTime(time: &stateObject.hold1, previosEnd: stateObject.inhaleEnds)
-                                
-                                stateObject.isEnd(breathTime: stateObject.hold1, endTime: &stateObject.hold1Ends)
+//                                stateObject.descendTime(time: &stateObject.hold1, previosEnd: stateObject.inhaleEnds)
+//
+//                                stateObject.isEnd(breathTime: stateObject.hold1, endTime: &stateObject.hold1Ends)
                             }
                     }
                 }
@@ -107,11 +107,11 @@ struct FourCircles: View {
                             .frame(width: 60, height: 60)
                         Text("\(stateObject.exhale)")
                             .onReceive(stateObject.timer) { time in
-                                stateObject.descendTime(time: &stateObject.exhale, previosEnd: stateObject.hold1Ends)
-                                
-                                
-                                stateObject.isEnd(breathTime: stateObject.exhale, endTime: &stateObject.exhaleEnds)
-                              
+//                                stateObject.descendTime(time: &stateObject.exhale, previosEnd: stateObject.hold1Ends)
+//
+//
+//                                stateObject.isEnd(breathTime: stateObject.exhale, endTime: &stateObject.exhaleEnds)
+//
                             }
                     }
                 }
@@ -131,9 +131,9 @@ struct FourCircles: View {
                         Text("\(stateObject.hold2)")
                             .onReceive(stateObject.timer) { time in
                               
-                                stateObject.descendTime(time: &stateObject.hold2, previosEnd: stateObject.exhaleEnds)
-                                
-                                stateObject.fetchData()
+//                                stateObject.descendTime(time: &stateObject.hold2, previosEnd: stateObject.exhaleEnds)
+//                                
+//                                stateObject.fetchData()
     
                             }
                     }
