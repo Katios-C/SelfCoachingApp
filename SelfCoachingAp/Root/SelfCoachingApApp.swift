@@ -8,7 +8,7 @@ struct SelfCoachingApApp: App {
    // let timerView = TimerManager()
     init() {
         ServiceLocator.shared.addDependancy(object: FourCirclesViewModel())
-        ServiceLocator.shared.addDependancy(object: TestClass())
+//        ServiceLocator.shared.addDependancy(object: TestClass())
     }
     
     var body: some Scene {

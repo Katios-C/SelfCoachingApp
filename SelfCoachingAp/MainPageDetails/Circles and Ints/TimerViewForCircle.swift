@@ -3,8 +3,6 @@ import SwiftUI
 struct TimerViewForCircle: View {
     
     @StateObject var stateObject:  FourCirclesViewModel
-   // @EnvironmentObject  var watchTimer: TimerManager
- //  @State private var timerViewPresenting = false
     @EnvironmentObject var timerManager: TimerManager
     
     var body: some View {
@@ -24,12 +22,4 @@ struct TimerViewForCircle: View {
         
     }
     
-//    func decrementTime() {
-//        timerManager.sourceTimer?.setEventHandler {
-//            
-//        }
-//        timerManager.sourceTimer?.schedule(deadline: .now(),
-//                                   repeating: 1)
-//        
-//    }
 }

@@ -115,7 +115,7 @@ extension TimerManager {
             hoursString = "0" + hoursString
         }
         
-        var watchTimeString = "\(secondsString)"
+        let watchTimeString = "\(secondsString)"
        
 //        if hoursString == "00" {
 //            watchTimeString = String(watchTimeString.dropFirst(3))

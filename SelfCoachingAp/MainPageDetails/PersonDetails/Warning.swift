@@ -36,9 +36,3 @@ Text("Пожалуйста, будьте внимательны к своему 
                 RoundedRectangle(cornerRadius: 10).strokeBorder(Color.green, lineWidth: 2).grayscale(2))
     }
 }
-
-struct Warning_Previews: PreviewProvider {
-    static var previews: some View {
-        Warning()
-    }
-}

@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 import iOSDevPackage
 
@@ -31,14 +29,12 @@ let text3 = "расслабиться"
                         .shadow(color: .gray, radius: 4, x: 0, y: 4)
                         .grayscale(2)
                 }).padding(4)
-                   // .navigationTitle("Home")
                 Spacer()
                 
                
                
           
         }
-//
             ScrollView {
                 VStack {
             Text(text1)

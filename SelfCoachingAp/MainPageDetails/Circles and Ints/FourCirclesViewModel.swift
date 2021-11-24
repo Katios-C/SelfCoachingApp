@@ -40,11 +40,6 @@ class FourCirclesViewModel: ObservableObject {
     
     
     
-  
-    
-    
-    
-    
     func progressResult(whatBreath: Int) -> CGFloat {
         return CGFloat(((1 / Double(whatBreath) * 10) / 10))
     }
