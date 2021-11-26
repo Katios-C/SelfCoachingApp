@@ -9,14 +9,14 @@ import CoreHaptics
 struct FourCircleDispatch: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    @EnvironmentObject var timerManager: TimerManager
-    @StateObject var stateObject:  FourCirclesViewModel
-   @State private var engine: CHHapticEngine?
+  //  @EnvironmentObject var timerManager: TimerManager
+  //  @StateObject var stateObject =  FourCirclesViewModel()
+    @EnvironmentObject  var stateObject: FourCirclesViewModel
     
-    @State var inhale = 0
-    @State var hold1 = 0
-    @State var exhale = 0
-    @State var hold2 = 0
+  //  @State var inhale = 0
+ //   @State var hold1 = 0
+   // @State var exhale = 0
+  //  @State var hold2 = 0
     
     
     @State var totalTime = 0
@@ -42,10 +42,10 @@ struct FourCircleDispatch: View {
                         .shadow(color: .gray, radius: 4, x: 0, y: 4)
                         .grayscale(2)
                 })
-                    .navigationTitle("Home")
+                   // .navigationTitle("Home")
                 Spacer()
                 
-                TikTak(stateObject: stateObject)
+                MetronomView(stateObject: stateObject)
                 
                 ZStack {
                     Circle()
@@ -74,11 +74,11 @@ struct FourCircleDispatch: View {
                     .font(.footnote)
                 ZStack {
                     Circle()
-                        .fill(inhale == 0 ? Color.gray.opacity(0.2) : Color.yellow)
+                        .fill(stateObject.inhale == 0 ? Color.gray.opacity(0.2) : Color.yellow)
                         .grayscale(2)
                         .frame(width: 60, height: 60)
                     
-                    Text("\(inhale)")
+                    Text("\(stateObject.inhale)")
                        
                 }
                 
@@ -90,11 +90,11 @@ struct FourCircleDispatch: View {
                     .font(.footnote)
                 ZStack {
                     Circle()
-                        .fill(hold1 == 0 || !inhaleends ? Color.gray.opacity(0.2) : Color.yellow)
+                        .fill(stateObject.hold1 == 0 || !inhaleends ? Color.gray.opacity(0.2) : Color.yellow)
                         .grayscale(2)
                         .frame(width: 60, height: 60)
 
-                    Text("\(hold1)")
+                    Text("\(stateObject.hold1)")
 
                 }
 
@@ -106,11 +106,11 @@ struct FourCircleDispatch: View {
                     .font(.footnote)
                 ZStack {
                     Circle()
-                        .fill(exhale == 0 || !hold1ends ? Color.gray.opacity(0.2) : Color.yellow)
+                        .fill(stateObject.exhale == 0 || !hold1ends ? Color.gray.opacity(0.2) : Color.yellow)
                         .grayscale(2)
                         .frame(width: 60, height: 60)
 
-                    Text("\(exhale)")
+                    Text("\(stateObject.exhale)")
 
                 }
 
@@ -122,11 +122,11 @@ struct FourCircleDispatch: View {
                     .font(.footnote)
                 ZStack {
                     Circle()
-                        .fill(hold2 == 0 || !exhaleends ? Color.gray.opacity(0.2) : Color.yellow)
+                        .fill(stateObject.hold2 == 0 || !exhaleends ? Color.gray.opacity(0.2) : Color.yellow)
                         .grayscale(2)
                         .frame(width: 60, height: 60)
 
-                    Text("\(hold2)")
+                    Text("\(stateObject.hold2 )")
 
                 }
 
@@ -142,7 +142,7 @@ struct FourCircleDispatch: View {
             
             VStack {
 
-                Text("\(stateObject.timeString(time: totalTime))")
+                Text("\(stateObject.timeString())")
                 
                 HStack {
                     //
@@ -164,10 +164,11 @@ struct FourCircleDispatch: View {
                 .opacity(totalTime > 0 ? 0 : 1)
                 .animation(.easeInOut(duration: 3))
                 .onTapGesture {
-                    inhale = stateObject.inhale
-                    hold1 = stateObject.hold1
-                    exhale = stateObject.exhale
-                    hold2 = stateObject.hold2
+//                    stateObject.inhale = UserDefaults.standard.integer(forKey: "inhale")
+//                   stateObject.hold1 = UserDefaults.standard.integer(forKey: "hold1")
+//                    stateObject.exhale = UserDefaults.standard.integer(forKey: "exhale")
+//                    stateObject.hold2 = UserDefaults.standard.integer(forKey: "hold2")
+                    stateObject.restartTime()
                     totalTime = stateObject.totaltime
                     
                     inhaleends = false
@@ -175,9 +176,9 @@ struct FourCircleDispatch: View {
                     exhaleends = false
                     hold2ends = false
                     
-                    let impactMed = UIImpactFeedbackGenerator(style: .heavy)
-                        impactMed.impactOccurred()
-//                    AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {   }
+                 //   let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                    //    impactMed.impactOccurred()
+                    AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {   }
                 }
             }
 
@@ -185,117 +186,90 @@ struct FourCircleDispatch: View {
     }
         
         .onAppear{
-            inhale = stateObject.inhale
-            hold1 = stateObject.hold1
-            exhale = stateObject.exhale
-            hold2 = stateObject.hold2
+           // inhale = stateObject.inhale
+         //   hold1 = stateObject.hold1
+          //  exhale = stateObject.exhale
+           // hold2 = stateObject.hold2
             totalTime = stateObject.totaltime
             
-            timerManager.start()
-            incrementIntInhale()
+            stateObject.start()
+           
+                stateObject.incrementIntInhale()
+          //  incrementIntInhale()
            
         }
         .onDisappear{
-            timerManager.finish()
+            stateObject.finish()
         }
         
     }
     
     func incrementIntInhale() {
-        timerManager.sourceTimer?.setEventHandler {
-           
-          
-            if inhale > 0 && totalTime > 0 {
-                inhale -= 1
+        
+        stateObject.sourceTimer?.setEventHandler {
+
+
+            if stateObject.inhale > 0 && totalTime > 0 {
+                stateObject.inhale -= 1
             }
             else {
                 inhaleends = true
             }
-            
-         
-            if hold1  > 0 && inhaleends && totalTime > 0 {
-                hold1 -= 1
+
+
+            if stateObject.hold1  > 0 && inhaleends && totalTime > 0 {
+                stateObject.hold1 -= 1
             }
             else {
                 if inhaleends {
                 hold1ends = true
                 }
-             
+
             }
-            
-            if exhale  > 0 && hold1ends && totalTime > 0 {
-                exhale -= 1
+
+            if stateObject.exhale  > 0 && hold1ends && totalTime > 0 {
+                stateObject.exhale -= 1
             }
             else {
                 if hold1ends {
                     exhaleends = true
                 }
             }
-            
-            if hold2 > 0 && exhaleends && totalTime > 0{
-                hold2 -= 1
+
+            if stateObject.hold2 > 0 && exhaleends && totalTime > 0{
+                stateObject.hold2 -= 1
             }
-  
-            
-            if hold2 == 0 && exhaleends && totalTime > 0 {
-                inhale = stateObject.inhale
-                hold1 = stateObject.hold1
-                exhale = stateObject.exhale
-                hold2 = stateObject.hold2
-                
+
+
+            if stateObject.hold2 == 0 && exhaleends && totalTime > 0 {
+                stateObject.inhale = UserDefaults.standard.integer(forKey: "inhale")
+                stateObject.hold1 = UserDefaults.standard.integer(forKey: "hold1")
+                stateObject.exhale = UserDefaults.standard.integer(forKey: "exhale")
+                stateObject.hold2 = UserDefaults.standard.integer(forKey: "hold2")
+
                 inhaleends = false
                 hold1ends = false
                 exhaleends = false
                 hold2ends = false
             }
-            
-            
+
+
             if totalTime > 0 {
                 totalTime -= 1
             } else {
-                inhale = 0
-                hold1 = 0
-                exhale = 0
-                hold2 = 0
+                stateObject.inhale = 0
+                stateObject.hold1 = 0
+                stateObject.exhale = 0
+                stateObject.hold2 = 0
             }
         }
-        
-        timerManager.sourceTimer?.schedule(deadline: .now(),
+
+        stateObject.sourceTimer?.schedule(deadline: .now(),
                                    repeating: 1)
     }
 
-    func prepareHaptics() {
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
 
-        do {
-            self.engine = try CHHapticEngine()
-            try engine?.start()
-        } catch {
-            print("There was an error creating the engine: \(error.localizedDescription)")
-        }
-    }
-    
-    
-    func complexSuccess() {
-        // make sure that the device supports haptics
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-        var events = [CHHapticEvent]()
 
-        // create one intense, sharp tap
-        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
-        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)
-        let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
-        events.append(event)
-
-        // convert those events into a pattern and play it immediately
-        do {
-            let pattern = try CHHapticPattern(events: events, parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
-        } catch {
-            print("Failed to play pattern: \(error.localizedDescription).")
-        }
-    }
     
     
 }

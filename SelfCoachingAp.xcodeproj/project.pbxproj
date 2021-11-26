@@ -7,22 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		950D889C271E9D470014F756 /* FourCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889B271E9D470014F756 /* FourCircles.swift */; };
 		950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */; };
 		950F139A2713F85F00E82A8A /* MainTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F13992713F85E00E82A8A /* MainTriangle.swift */; };
 		950F609227423E3E0009726F /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609127423E3E0009726F /* TimerManager.swift */; };
 		950F609E274502020009726F /* FourCircleDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609D274502020009726F /* FourCircleDispatch.swift */; };
 		951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */; };
 		951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */; };
-		951084E426DCCD550092BA5B /* StillExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084E326DCCD550092BA5B /* StillExView.swift */; };
-		95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95153D3927227388008B8AC6 /* TimerViewForCircle.swift */; };
 		951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */; };
 		951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0126D3866B004A5F46 /* Assets.xcassets */; };
 		951A1F0526D3866B004A5F46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0426D3866B004A5F46 /* Preview Assets.xcassets */; };
 		951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 951A1F4726D503C7004A5F46 /* iOSDevPackage */; };
 		9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535FB8D26E9B1BC0026C5DE /* Button.swift */; };
 		9535FB9A26F0BAE20026C5DE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9535FB9926F0BAE20026C5DE /* Resolver */; };
-		9584D9F1272F9C1700012A07 /* Tiktak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9F0272F9C1700012A07 /* Tiktak.swift */; };
+		9584D9F1272F9C1700012A07 /* MetronomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9F0272F9C1700012A07 /* MetronomView.swift */; };
 		9584D9F3272F9E4800012A07 /* tiktak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9F2272F9E4800012A07 /* tiktak.mp3 */; };
 		95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */; };
 		95E91D26273A3DF400928460 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D25273A3DF400928460 /* ServiceLocator.swift */; };
@@ -34,15 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		950D889B271E9D470014F756 /* FourCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCircles.swift; sourceTree = "<group>"; };
 		950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCirclesViewModel.swift; sourceTree = "<group>"; };
 		950F13992713F85E00E82A8A /* MainTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTriangle.swift; sourceTree = "<group>"; };
 		950F609127423E3E0009726F /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		950F609D274502020009726F /* FourCircleDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCircleDispatch.swift; sourceTree = "<group>"; };
 		951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetalsView.swift; sourceTree = "<group>"; };
 		951084BF26D796820092BA5B /* TopTemplateForDetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTemplateForDetalView.swift; sourceTree = "<group>"; };
-		951084E326DCCD550092BA5B /* StillExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillExView.swift; sourceTree = "<group>"; };
-		95153D3927227388008B8AC6 /* TimerViewForCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewForCircle.swift; sourceTree = "<group>"; };
 		951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfCoachingAp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCoachingApApp.swift; sourceTree = "<group>"; };
 		951A1F0126D3866B004A5F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +44,7 @@
 		951A1F0626D3866B004A5F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelfCoachingAp.entitlements; sourceTree = "<group>"; };
 		9535FB8D26E9B1BC0026C5DE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		9584D9F0272F9C1700012A07 /* Tiktak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiktak.swift; sourceTree = "<group>"; };
+		9584D9F0272F9C1700012A07 /* MetronomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomView.swift; sourceTree = "<group>"; };
 		9584D9F2272F9E4800012A07 /* tiktak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiktak.mp3; sourceTree = "<group>"; };
 		95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95E91D25273A3DF400928460 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -74,21 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		950D8898271E9CD00014F756 /* Circles and Ints */ = {
-			isa = PBXGroup;
-			children = (
-				9584D9F0272F9C1700012A07 /* Tiktak.swift */,
-				951084E326DCCD550092BA5B /* StillExView.swift */,
-				950D889B271E9D470014F756 /* FourCircles.swift */,
-				950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */,
-				95153D3927227388008B8AC6 /* TimerViewForCircle.swift */,
-				950F609D274502020009726F /* FourCircleDispatch.swift */,
-				950F13992713F85E00E82A8A /* MainTriangle.swift */,
-				950F609127423E3E0009726F /* TimerManager.swift */,
-			);
-			path = "Circles and Ints";
-			sourceTree = "<group>";
-		};
 		951084D326D8D0A30092BA5B /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +123,9 @@
 				951A1F0626D3866B004A5F46 /* Info.plist */,
 				95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */,
 				951084D326D8D0A30092BA5B /* Root */,
-				951A1F4326D50347004A5F46 /* MainPageDetails */,
+				951084DC26D8D3530092BA5B /* SingleViews */,
+				951084DA26D8D2380092BA5B /* PersonDetails */,
+				951A1F4326D50347004A5F46 /* MainPage */,
 				951A1F0126D3866B004A5F46 /* Assets.xcassets */,
 				951A1F0326D3866B004A5F46 /* Preview Content */,
 			);
@@ -159,14 +140,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		951A1F4326D50347004A5F46 /* MainPageDetails */ = {
+		951A1F4326D50347004A5F46 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				950D8898271E9CD00014F756 /* Circles and Ints */,
-				951084DA26D8D2380092BA5B /* PersonDetails */,
-				951084DC26D8D3530092BA5B /* SingleViews */,
+				9584D9F0272F9C1700012A07 /* MetronomView.swift */,
+				950D889D271EA0C10014F756 /* FourCirclesViewModel.swift */,
+				950F609D274502020009726F /* FourCircleDispatch.swift */,
+				950F13992713F85E00E82A8A /* MainTriangle.swift */,
+				950F609127423E3E0009726F /* TimerManager.swift */,
 			);
-			path = MainPageDetails;
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		9584D9ED272F9B7100012A07 /* audio */ = {
@@ -268,16 +251,13 @@
 				95E91D34273E124F00928460 /* TextView.swift in Sources */,
 				9535FB8E26E9B1BC0026C5DE /* Button.swift in Sources */,
 				951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */,
-				95153D3A27227388008B8AC6 /* TimerViewForCircle.swift in Sources */,
 				95E91D2C273CFFD500928460 /* AboutTimer.swift in Sources */,
 				950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */,
-				951084E426DCCD550092BA5B /* StillExView.swift in Sources */,
-				9584D9F1272F9C1700012A07 /* Tiktak.swift in Sources */,
+				9584D9F1272F9C1700012A07 /* MetronomView.swift in Sources */,
 				95E91D32273D044E00928460 /* AboutMe.swift in Sources */,
 				951084C026D796820092BA5B /* TopTemplateForDetalView.swift in Sources */,
 				950F139A2713F85F00E82A8A /* MainTriangle.swift in Sources */,
 				950F609E274502020009726F /* FourCircleDispatch.swift in Sources */,
-				950D889C271E9D470014F756 /* FourCircles.swift in Sources */,
 				95E91D2E273D020E00928460 /* BreathSceme.swift in Sources */,
 				95E91D30273D031200928460 /* Warning.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
