@@ -19,12 +19,10 @@ struct Text3: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
         Text("1. Вдох короче выдоха")
-                //.foregroundColor(Color.green)
         Text("2. Задержка после вдоха отсутствует")
         Text("3. Выдох длиннее или равен вдоху")
         Text("4. Задержка после выдоха")
         Text("Примеры: 4-0-4-4, 4-0-6-4")
-                //.foregroundColor(Color.green)
         Text("Внимание! Ориентируйтесь на свои ощущения, если кружится голова - остановите тренировку")
         }
     }

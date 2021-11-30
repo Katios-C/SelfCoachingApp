@@ -1,12 +1,9 @@
-
 import SwiftUI
 import iOSDevPackage
-
 import Combine
 
 struct MainTriangle: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
-   // let timerView = TimerManager()
     @StateObject var stateObject = FourCirclesViewModel()
     
     @AppStorage("inhale") var inhale =  0
@@ -14,9 +11,6 @@ struct MainTriangle: View {
     @AppStorage("exhale")  var exhale = 0
     @AppStorage("hold2")  var  hold2 = 0
     @AppStorage("inputTime") var inputTime = 0
-    
-    
-  
     
     
     var body: some View {
@@ -29,32 +23,26 @@ struct MainTriangle: View {
             
             VStack {
                 VStack {
-                HStack {
-                   Spacer()
-                    ZStack {
-                        Circle()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(Color.green)
-                            .opacity(0.5)
-                    Image(systemName: "ellipsis")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .rotationEffect(.degrees(90))
-                        .onTapGesture {
-                            navigation.push(PersonDetalsView())
+                    HStack {
+                        Spacer()
+                        ZStack {
+                            Circle()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(Color.green)
+                                .opacity(0.5)
+                            Image(systemName: "ellipsis")
+                                .font(.title2)
+                                .foregroundColor(.gray)
+                                .rotationEffect(.degrees(90))
+                                .onTapGesture {
+                                    navigation.push(PersonDetalsView())
+                                }
                         }
-                    }
-                    
-                }.padding(10)
-                
-                
-              //  Divider()
+                    }.padding(10)
                 }
                 Spacer()
                 
                 VStack {
-                    
-                    
                     VStack {
                         Text("Время тренировки в минутах")
                             .font(.footnote)
@@ -66,21 +54,12 @@ struct MainTriangle: View {
                                 .frame(width: 70, height: 70)
                             
                             Picker("\(inputTime)", selection: $inputTime) {
-                                ForEach(0...100, id: \.self) { number in
+                                ForEach(1...100, id: \.self) { number in
                                     Text("\(number)")
-                                      
                                 }
-                              
+                                
                             }.pickerStyle(.menu)
-                            .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                            
-                               
-                               
-                            
-                        }
-              
-                        .onTapGesture {
-                        
+                                .shadow(color: .gray, radius: 4, x: 0, y: 4)
                         }
                     }
                     HStack {
@@ -101,8 +80,6 @@ struct MainTriangle: View {
                                 }.pickerStyle(.menu)
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                                     .frame(width: 70, height: 70)
-                                    
-                                    
                             }
                         }
                         
@@ -141,8 +118,6 @@ struct MainTriangle: View {
                                     }
                                 }.pickerStyle(.menu)
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                                
-                                
                             }
                         }
                         
@@ -171,14 +146,12 @@ struct MainTriangle: View {
                     HStack {
                         
                         Button(action: {
-          
-                            stateObject.intervalToAdjust(inhalE: inhale, holD1: hold1, exhalE: exhale, holD2: hold2)
+                            
+                            stateObject.intervalToAdjust(inhalE: inhale, holD1: hold1, exhalE: exhale, holD2: hold2, total: inputTime)
                             
                             if stateObject.isNotNull(inhale:  inhale, inputTime: inputTime){
-
-                                navigation.push(FourCircleDispatch().environmentObject(stateObject)
-                                                    
-                                                    //.environmentObject(timerView))
+                                
+                                navigation.push(FourCircleDispatch(stateObject: stateObject)
                                 )
                             }
                             

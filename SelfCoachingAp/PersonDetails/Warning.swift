@@ -1,4 +1,3 @@
-
 import SwiftUI
 import iOSDevPackage
 
@@ -21,16 +20,11 @@ struct Warning: View {
                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                     .grayscale(2)
             }).padding(4)
-               // .navigationTitle("Home")
             Spacer()
-            
-           
-            
-            
         }
         Spacer()
     }
-Text("Пожалуйста, будьте внимательны к своему самочувствию! При малейшем дискомфорте остановите тренировку, проконсультируйтесь с лечащим врачом.")
+        Text("Пожалуйста, будьте внимательны к своему самочувствию! При малейшем дискомфорте остановите тренировку, проконсультируйтесь с лечащим врачом.")
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 10).strokeBorder(Color.green, lineWidth: 2).grayscale(2))
