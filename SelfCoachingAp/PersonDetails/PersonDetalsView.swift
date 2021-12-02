@@ -5,10 +5,9 @@ struct PersonDetalsView: View {
     
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    
     var body: some View {
         ZStack {
-            Image("m6")
+            Image(imageForMainScreen)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .opacity(0.2)
@@ -19,7 +18,7 @@ struct PersonDetalsView: View {
                     Button(action: {
                         navigation.pop(to: .previous)
                     }, label: {
-                        Text("Back")
+                        Text(back)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.vertical, 12)
@@ -35,9 +34,9 @@ struct PersonDetalsView: View {
                 Spacer()
                 
                 Button(action: {
-                    navigation.push(AboutTimer())
+                    navigation.push(AboutTimerView())
                 }, label: {
-                    Text("О таймере")
+                    Text(aboutTimer)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -51,9 +50,9 @@ struct PersonDetalsView: View {
                 
                 
                 Button(action: {
-                    navigation.push(BreathSceme())
+                    navigation.push(BreathScemeView())
                 }, label: {
-                    Text("Схемы дыхания")
+                    Text(breathScheme)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -67,9 +66,9 @@ struct PersonDetalsView: View {
                 
                 
                 Button(action: {
-                    navigation.push(Warning())
+                    navigation.push(WarningView())
                 }, label: {
-                    Text("Предостережение")
+                    Text(warning)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -82,9 +81,9 @@ struct PersonDetalsView: View {
                 }).padding()
                 
                 Button(action: {
-                    navigation.push(AboutMe())
+                    navigation.push(AboutMeView())
                 }, label: {
-                    Text("О разработчике")
+                    Text(aboutDeveloper)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)

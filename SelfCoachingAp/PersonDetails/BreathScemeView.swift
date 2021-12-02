@@ -1,13 +1,9 @@
 import SwiftUI
 import iOSDevPackage
 
-struct BreathSceme: View {
+struct BreathScemeView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    let text1 = "Три эффекта дыхательной тренировки:"
-    let text2 = "взбодриться"
-    let text3 = "расслабиться"
-    let text4 = "сбалансироваться"
     @State var isText2 = false
     @State var isText3 = false
     @State var isText4 = false
@@ -19,7 +15,7 @@ struct BreathSceme: View {
                 Button(action: {
                     navigation.pop(to: .previous)
                 }, label: {
-                    Text("Back")
+                    Text(back)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -33,12 +29,12 @@ struct BreathSceme: View {
             }
             ScrollView {
                 VStack {
-                    Text(text1)
+                    Text(breathScemeViewOne)
                         .fontWeight(.semibold)
                         .padding(4)
                     
                     
-                    Text(text2)
+                    Text(breathScemeViewTwo)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -52,13 +48,13 @@ struct BreathSceme: View {
                             isText2.toggle()
                         }
                     
-                    isText2 ? Text2()
+                    isText2 ? InhaleTextView()
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
                     
                     
-                    Text(text3)
+                    Text(breathScemeViewThree)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -70,12 +66,12 @@ struct BreathSceme: View {
                         .onTapGesture {
                             isText3.toggle()
                         }
-                    isText3 ? Text3() .padding()
+                    isText3 ? ExhaleTextView() .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
                     
                     
-                    Text(text4)
+                    Text(breathScemeViewFour)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 15)
@@ -87,7 +83,7 @@ struct BreathSceme: View {
                         .onTapGesture {
                             isText4.toggle()
                         }
-                    isText4 ? Text4() .padding()
+                    isText4 ? EqualBreathView() .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
                 }

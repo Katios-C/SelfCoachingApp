@@ -1,9 +1,7 @@
-
-
 import SwiftUI
 import iOSDevPackage
 
-struct AboutTimer: View {
+struct AboutTimerView: View {
     
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
@@ -13,7 +11,7 @@ struct AboutTimer: View {
                 Button(action: {
                     navigation.pop(to: .previous)
                 }, label: {
-                    Text("Back")
+                    Text(back)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -29,7 +27,7 @@ struct AboutTimer: View {
             }
             Spacer()
             
-          Text("О таймере")
+          Text(aboutTimer)
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .padding(.vertical, 12)
@@ -42,33 +40,33 @@ struct AboutTimer: View {
             VStack(alignment: .leading, spacing: 6) {
           
                 HStack {
-                    Image(systemName: "lungs").resizable()
+                    Image(systemName: lungs).resizable()
                         .frame(width: 20, height: 20)
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.gray)
                         .shadow(color: .green, radius: 4, x: 0, y: 4)
-                 Text("Таймер предназначен для дыхательных тренировок")
+                 Text(aboutTimerText)
                     .padding(4)
                 }
                 
                 HStack {
                   
-                    Image(systemName: "circle.grid.cross").resizable()
+                    Image(systemName: circleGridCross ).resizable()
                         .frame(width: 20, height: 20)
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.gray)
                         .shadow(color: .green, radius: 4, x: 0, y: 4)
-                Text("Вы можете  выставить необходимые интервалы и задать общее время тренировки.")
+                Text(textAboutIntervals)
                     .padding(4)
                                     }
                 HStack {
                     HStack {
-                        Image(systemName: "metronome").resizable()
+                        Image(systemName: metronom).resizable()
                             .frame(width: 20, height: 20)
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(.gray)
                             .shadow(color: .green, radius: 4, x: 0, y: 4)
-                Text("Дополнительно можно добавить звук метронома.")
+                Text(addSoundMetronome)
                     .padding(4)
                 }
                 }

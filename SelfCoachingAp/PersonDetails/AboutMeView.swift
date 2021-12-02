@@ -2,7 +2,7 @@ import SwiftUI
 import iOSDevPackage
 
 
-struct AboutMe: View {
+struct AboutMeView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     var body: some View {
@@ -11,7 +11,7 @@ struct AboutMe: View {
                 Button(action: {
                     navigation.pop(to: .previous)
                 }, label: {
-                    Text("BACK")
+                    Text(back)
                         .padding(.vertical, 12)
                         .foregroundColor(.black)
                         .frame(width: UIScreen.main.bounds.width / 4)
@@ -22,7 +22,7 @@ struct AboutMe: View {
             }
             
             Spacer()
-            Text("Привет! Меня зовут Катя, я придумала и сделал это приложение. С огромной помощью моего наставника Коли и участием компании ISSArt")
+            Text(aboutMeText)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 10).strokeBorder(Color.blue, lineWidth: 2))

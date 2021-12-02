@@ -4,7 +4,7 @@ import AudioToolbox
 import CoreHaptics
 
 
-struct FourCircleDispatch: View {
+struct FourCircleView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     @StateObject var stateObject: FourCirclesViewModel
     
@@ -20,7 +20,7 @@ struct FourCircleDispatch: View {
                 Button(action: {
                     navigation.pop(to: .previous)
                 }, label: {
-                    Text("Back")
+                    Text(back)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.vertical, 12)
@@ -39,14 +39,13 @@ struct FourCircleDispatch: View {
                         .frame(width: 30, height: 30)
                         .foregroundColor(Color.green)
                         .opacity(0.5)
-                    Image(systemName: "ellipsis")
+                    Image(systemName: ellipsis)
                         .font(.title2)
                         .foregroundColor(.gray)
                         .rotationEffect(.degrees(90))
                         .onTapGesture {
                             navigation.push(PersonDetalsView())
                         }
-                    
                 }
             }
             .padding()
@@ -56,7 +55,7 @@ struct FourCircleDispatch: View {
             
             HStack(alignment:.center, spacing: 20) {
                 VStack {
-                    Text("Вдох")
+                    Text(inhaleText)
                         .opacity(1.0)
                         .font(.footnote)
                     ZStack {
@@ -70,12 +69,12 @@ struct FourCircleDispatch: View {
                 }
                 
                 VStack {
-                    Text("Задержка")
+                    Text(holdText)
                         .opacity(1.0)
                         .font(.footnote)
                     ZStack {
                         Circle()
-                            .fill(stateObject.hold1 == 0 || !inhaleends ? Color.gray.opacity(0.2) : Color.yellow)
+                            .fill(stateObject.hold1 == 0 || !stateObject.inhaleEnds ? Color.gray.opacity(0.2) : Color.yellow)
                             .grayscale(2)
                             .frame(width: 60, height: 60)
                         
@@ -84,12 +83,12 @@ struct FourCircleDispatch: View {
                 }
                 
                 VStack {
-                    Text("Выдох")
+                    Text(exhaleText)
                         .opacity(1.0)
                         .font(.footnote)
                     ZStack {
                         Circle()
-                            .fill(stateObject.exhale == 0 || !hold1ends ? Color.gray.opacity(0.2) : Color.yellow)
+                            .fill(stateObject.exhale == 0 || !stateObject.hold1Ends ? Color.gray.opacity(0.2) : Color.yellow)
                             .grayscale(2)
                             .frame(width: 60, height: 60)
                         
@@ -99,12 +98,12 @@ struct FourCircleDispatch: View {
                 }
                 
                 VStack {
-                    Text("Задержка")
+                    Text(holdText)
                         .opacity(1.0)
                         .font(.footnote)
                     ZStack {
                         Circle()
-                            .fill(stateObject.hold2 == 0 || !exhaleends ? Color.gray.opacity(0.2) : Color.yellow)
+                            .fill(stateObject.hold2 == 0 || !stateObject.exhaleEnds ? Color.gray.opacity(0.2) : Color.yellow)
                             .grayscale(2)
                             .frame(width: 60, height: 60)
                         
@@ -118,7 +117,7 @@ struct FourCircleDispatch: View {
                 Text("\(stateObject.timeString())")
                 
                 HStack {
-                    Text("Повторить")
+                    Text(repeatText)
                         .fontWeight(.semibold)
                 }
                 .padding()

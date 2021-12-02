@@ -12,7 +12,7 @@ struct SelfCoachingApApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationControllerView(transition: .custom(.opacity, .opacity)) {
-                MainTriangle()
+                StartPageView()
                    
                     //.environmentObject(timeManager)
             }

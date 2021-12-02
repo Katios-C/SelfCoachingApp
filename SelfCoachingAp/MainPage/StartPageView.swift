@@ -2,20 +2,20 @@ import SwiftUI
 import iOSDevPackage
 import Combine
 
-struct MainTriangle: View {
+struct StartPageView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     @StateObject var stateObject = FourCirclesViewModel()
     
-    @AppStorage("inhale") var inhale =  0
-    @AppStorage("hold1")  var  hold1 = 0
-    @AppStorage("exhale")  var exhale = 0
-    @AppStorage("hold2")  var  hold2 = 0
-    @AppStorage("inputTime") var inputTime = 0
+    @AppStorage(inhaleUD) var inhale =  0
+    @AppStorage(hold1UD) var  hold1 = 0
+    @AppStorage(exhaleUD) var exhale = 0
+    @AppStorage(hold2UD) var  hold2 = 0
+    @AppStorage(inputTimeUI) var inputTime = 0
     
     
     var body: some View {
         ZStack {
-            Image("m6")
+            Image(imageForMainScreen)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .opacity(0.2)
@@ -30,7 +30,7 @@ struct MainTriangle: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor(Color.green)
                                 .opacity(0.5)
-                            Image(systemName: "ellipsis")
+                            Image(systemName: ellipsis)
                                 .font(.title2)
                                 .foregroundColor(.gray)
                                 .rotationEffect(.degrees(90))
@@ -44,7 +44,7 @@ struct MainTriangle: View {
                 
                 VStack {
                     VStack {
-                        Text("Время тренировки в минутах")
+                        Text(trainTimeText)
                             .font(.footnote)
                         ZStack {
                             
@@ -64,7 +64,7 @@ struct MainTriangle: View {
                     }
                     HStack {
                         VStack{
-                            Text("вдох")
+                            Text(inhaleTextMin)
                                 .font(.footnote)
                             
                             ZStack {
@@ -84,7 +84,7 @@ struct MainTriangle: View {
                         }
                         
                         VStack{
-                            Text("задержка")
+                            Text(holdTextMin)
                                 .font(.footnote)
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
@@ -97,14 +97,13 @@ struct MainTriangle: View {
                                         
                                     }
                                 }.pickerStyle(.menu)
-                                
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             }
                         }
                         
                         
                         VStack{
-                            Text("выдох")
+                            Text(exhaleTextMin)
                                 .font(.footnote)
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
@@ -123,7 +122,7 @@ struct MainTriangle: View {
                         
                         
                         VStack{
-                            Text("задержка")
+                            Text(holdTextMin)
                                 .font(.footnote)
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
@@ -144,21 +143,14 @@ struct MainTriangle: View {
                     
                     
                     HStack {
-                        
                         Button(action: {
-                            
                             stateObject.intervalToAdjust(inhalE: inhale, holD1: hold1, exhalE: exhale, holD2: hold2, total: inputTime)
-                            
                             if stateObject.isNotNull(inhale:  inhale, inputTime: inputTime){
-                                
-                                navigation.push(FourCircleDispatch(stateObject: stateObject)
-                                )
+                                navigation.push(FourCircleView(stateObject: stateObject))
                             }
-                            
                         }){
-                            
                             HStack {
-                                Text("Дышать")
+                                Text(startBreath)
                                     .fontWeight(.semibold)
                                     .font(.title)
                             }
@@ -167,7 +159,6 @@ struct MainTriangle: View {
                             .background(Color.green)
                             .clipShape(Capsule())
                             .padding(.vertical, 12)
-                            
                             .cornerRadius(8)
                             .frame(width: UIScreen.main.bounds.width / 2)
                             .grayscale(2)
@@ -175,9 +166,9 @@ struct MainTriangle: View {
                             
                         }
                         .alert(isPresented: $stateObject.showAlert, content: {
-                            Alert(title: Text("Внимание"),
-                                  message: Text("Время вдоха и время тренировки должны быть больше 0"),
-                                  dismissButton: .default(Text("OK"), action: {}))
+                            Alert(title: Text(alertWarning),
+                                  message: Text(alertMessage),
+                                  dismissButton: .default(Text(okText), action: {}))
                         })
                     }
                     
