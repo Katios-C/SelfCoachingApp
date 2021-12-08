@@ -1,7 +1,7 @@
 import SwiftUI
-import AVKit
-struct TikTak: View {
-    @StateObject var stateObject:  FourCirclesViewModel
+
+struct MetronomView: View {
+    @StateObject var stateObject: FourCirclesViewModel
     @State var isPlay = false
     
     var body: some View {
@@ -11,7 +11,7 @@ struct TikTak: View {
                 stateObject.audioPlayer.play()
                 isPlay = true
             }) {
-                Image(systemName: "metronome.fill").resizable()
+                Image(systemName: metronomImageName).resizable()
                     .frame(width: 20, height: 20)
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.gray)
@@ -20,16 +20,13 @@ struct TikTak: View {
             Button(action: {
                 stateObject.audioPlayer.pause()
                 isPlay = false
-                
             }) {
-                Image(systemName: "metronome").resizable()
+                Image(systemName: metronom).resizable()
                     .frame(width: 20, height: 20)
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.yellow)
             }
-            
         }
-        
         .onAppear {
             stateObject.playTikTak()
         }
