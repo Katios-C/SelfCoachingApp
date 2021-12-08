@@ -4,6 +4,7 @@ import AudioToolbox
 import CoreHaptics
 
 
+
 struct FourCircleView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     @StateObject var stateObject: FourCirclesViewModel
@@ -129,7 +130,7 @@ struct FourCircleView: View {
                 .frame(width: UIScreen.main.bounds.width / 2)
                 .grayscale(2)
                 .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                .opacity(totalTime > 0 ? 0 : 1)
+                .opacity(stateObject.totaltime > 0 ? 0 : 1)
                 .animation(.easeInOut(duration: 3))
                 .onTapGesture {
                     stateObject.restartTime()
