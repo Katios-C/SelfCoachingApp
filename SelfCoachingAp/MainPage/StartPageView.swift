@@ -171,7 +171,6 @@ struct StartPageView: View {
                                   dismissButton: .default(Text(okText), action: {}))
                         })
                     }
-                    
                 }
             }
         }
