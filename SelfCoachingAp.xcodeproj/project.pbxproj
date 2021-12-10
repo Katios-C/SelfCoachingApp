@@ -377,7 +377,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SelfCoachingAp/Preview Content\"";
-				DEVELOPMENT_TEAM = E6EEE7YUH4;
+				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SelfCoachingAp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -385,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SelfCoachingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issart.breathtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -402,7 +402,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SelfCoachingAp/Preview Content\"";
-				DEVELOPMENT_TEAM = E6EEE7YUH4;
+				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SelfCoachingAp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -410,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SelfCoachingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issart.breathtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

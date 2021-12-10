@@ -54,7 +54,7 @@ struct StartPageView: View {
                                 .frame(width: 70, height: 70)
                             
                             Picker("\(inputTime)", selection: $inputTime) {
-                                ForEach(1...100, id: \.self) { number in
+                                ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
                                 }
                                 
