@@ -7,10 +7,10 @@ struct PersonDetalsView: View {
     
     var body: some View {
         ZStack {
-            Image(imageForMainScreen)
+            Image("fon_color")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .opacity(0.2)
+                .aspectRatio(contentMode: .fill)
+               // .opacity(0.2)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {

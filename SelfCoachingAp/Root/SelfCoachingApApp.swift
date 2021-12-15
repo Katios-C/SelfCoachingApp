@@ -3,8 +3,7 @@ import iOSDevPackage
 
 @main
 struct SelfCoachingApApp: App {
-    
-   // @StateObject var timeManager = TimerManager()
+   
     init() {
         ServiceLocator.shared.addDependancy(object: FourCirclesViewModel())
     }
@@ -13,8 +12,7 @@ struct SelfCoachingApApp: App {
         WindowGroup {
             NavigationControllerView(transition: .custom(.opacity, .opacity)) {
                 StartPageView()
-                   
-                    //.environmentObject(timeManager)
+            
             }
         }
     }

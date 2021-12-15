@@ -14,34 +14,58 @@ struct StartPageView: View {
     
     
     var body: some View {
+      
         ZStack {
-            Image(imageForMainScreen)
+            Image("fon_color")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .opacity(0.2)
-                .edgesIgnoringSafeArea(.bottom)
-            
+                .aspectRatio(contentMode: .fill)
+                .opacity(0.7)
+                .ignoresSafeArea()
+         
+        
+        
+         
             VStack {
                 VStack {
                     HStack {
-                        Spacer()
+                       // Spacer()
                         ZStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(Color.green)
-                                .opacity(0.5)
-                            Image(systemName: ellipsis)
+
+                            
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.yellow)
+                                .grayscale(2)
+                                .frame(width: 35, height: 35)
+                            Image(systemName: "info.circle")
                                 .font(.title2)
-                                .foregroundColor(.gray)
-                                .rotationEffect(.degrees(90))
+                                .foregroundColor(.white)
                                 .onTapGesture {
                                     navigation.push(PersonDetalsView())
                                 }
                         }
-                    }.padding(10)
+                        .offset(x: 165, y: -5)
+                      
+                    }
+                       
+                        .padding(10)
+                 
+                   
                 }
+              //  .border(.red)
                 Spacer()
-                
+                VStack {
+
+                Image("girl4")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .opacity(0.6)
+                    .edgesIgnoringSafeArea(.bottom)
+                    .padding(15)
+
+
+
+                }
+              //  Spacer()
                 VStack {
                     VStack {
                         Text(trainTimeText)
@@ -56,9 +80,12 @@ struct StartPageView: View {
                             Picker("\(inputTime)", selection: $inputTime) {
                                 ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
-                                }
+                                      //  .foregroundColor(.yellow)
+                                      
+                                } .foregroundColor(.green)
                                 
                             }.pickerStyle(.menu)
+                                .foregroundColor(.white)
                                 .shadow(color: .gray, radius: 4, x: 0, y: 4)
                         }
                     }
@@ -78,6 +105,8 @@ struct StartPageView: View {
                                         Text("\(number)")
                                     }
                                 }.pickerStyle(.menu)
+                                    .foregroundColor(.white)
+
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                                     .frame(width: 70, height: 70)
                             }
@@ -97,6 +126,8 @@ struct StartPageView: View {
                                         
                                     }
                                 }.pickerStyle(.menu)
+                                    .foregroundColor(.white)
+
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             }
                         }
@@ -116,6 +147,8 @@ struct StartPageView: View {
                                         
                                     }
                                 }.pickerStyle(.menu)
+                                    .foregroundColor(.white)
+
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             }
                         }
@@ -135,6 +168,8 @@ struct StartPageView: View {
                                         
                                     }
                                 }.pickerStyle(.menu)
+                                    .foregroundColor(.white)
+
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             }
                         }
@@ -173,6 +208,8 @@ struct StartPageView: View {
                     }
                 }
             }
-        }
+        
+    }
     }
 }
+

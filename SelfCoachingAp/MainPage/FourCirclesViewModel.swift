@@ -62,8 +62,10 @@ class FourCirclesViewModel: ObservableObject {
     }
 
     func playTikTak() {
+        if totaltime > 0 {
         let sound = Bundle.main.path(forResource: tiktak, ofType: mp3)
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
     }
     
     func restartTime() {

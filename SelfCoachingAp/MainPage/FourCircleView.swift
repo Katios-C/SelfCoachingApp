@@ -16,6 +16,15 @@ struct FourCircleView: View {
     @State var hold2ends = false
     
     var body: some View {
+        
+        ZStack {
+            
+            Image("fon_color")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .opacity(0.7)
+                .ignoresSafeArea()
+        
         VStack {
             HStack {
                 Button(action: {
@@ -31,28 +40,50 @@ struct FourCircleView: View {
                         .shadow(color: .gray, radius: 4, x: 0, y: 4)
                         .grayscale(2)
                 })
-                Spacer()
+                    .padding(.horizontal, 30)
+                    .offset(x: -100, y: 0)
+                   
+              //  Spacer()
                 
+                HStack {
                 MetronomView(stateObject: stateObject)
+                   // .padding(.horizontal, 30)
+                    .offset(x: 65, y: 0)
                 
                 ZStack {
-                    Circle()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(Color.green)
-                        .opacity(0.5)
-                    Image(systemName: ellipsis)
+
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.yellow)
+                        .grayscale(2)
+                        .frame(width: 35, height: 35)
+                    Image(systemName: "info.circle")
                         .font(.title2)
-                        .foregroundColor(.gray)
-                        .rotationEffect(.degrees(90))
+                        .foregroundColor(.white)
                         .onTapGesture {
                             navigation.push(PersonDetalsView())
                         }
                 }
+                //.padding(.horizontal, 30)
+                .offset(x: 70, y: 0)
             }
-            .padding()
+            }
+           
+           // .padding()
+           // .border(.red)
             
             Spacer()
             
+            VStack {
+            Image("man2")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .opacity(0.6)
+                .frame(width: 400, height: 400)
+               // .edgesIgnoringSafeArea(.bottom)
+//.padding(15)
+            }
+
             
             HStack(alignment:.center, spacing: 20) {
                 VStack {
@@ -157,3 +188,4 @@ struct FourCircleView: View {
     }
 }
 
+}

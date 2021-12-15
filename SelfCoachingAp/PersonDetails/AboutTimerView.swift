@@ -6,6 +6,9 @@ struct AboutTimerView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     var body: some View {
+       
+        
+            
         VStack {
             HStack {
                 Button(action: {

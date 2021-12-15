@@ -6,9 +6,11 @@ struct MetronomView: View {
     
     var body: some View {
         HStack {
-            !isPlay ?
+            !isPlay  ?
             Button(action: {
-                stateObject.audioPlayer.play()
+              
+                
+                    stateObject.audioPlayer.play()
                 isPlay = true
             }) {
                 Image(systemName: metronomImageName).resizable()
