@@ -21,6 +21,9 @@ struct StartPageView: View {
                 .aspectRatio(contentMode: .fill)
                 .opacity(0.7)
                 .ignoresSafeArea()
+
+            
+          
          
         
         
@@ -32,18 +35,19 @@ struct StartPageView: View {
                         ZStack {
 
                             
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.yellow)
-                                .grayscale(2)
-                                .frame(width: 35, height: 35)
-                            Image(systemName: "info.circle")
+//                            RoundedRectangle(cornerRadius: 20)
+//                                .fill(Color.yellow)
+//                                .grayscale(2)
+//                                .frame(width: 35, height: 35)
+                            Image("infopdf")
                                 .font(.title2)
-                                .foregroundColor(.white)
+                               // .foregroundColor(.white)
                                 .onTapGesture {
                                     navigation.push(PersonDetalsView())
                                 }
                         }
                         .offset(x: 165, y: -5)
+                        .padding(5)
                       
                     }
                        
@@ -66,69 +70,98 @@ struct StartPageView: View {
 
                 }
               //  Spacer()
-                VStack {
+              //  VStack {
                     VStack {
                         Text(trainTimeText)
                             .font(.footnote)
                         ZStack {
                             
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.yellow)
-                                .grayscale(2)
-                                .frame(width: 70, height: 70)
-                            
+//                            RoundedRectangle(cornerRadius: 20)
+//                                .fill(Color.yellow)
+//                                .grayscale(2)
+//                                .frame(width: 70, height: 70)
+                            Image("circle2pdf")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                               // .opacity(0.7)
+                              //  .frame(width: 90, height: 90)
+                                
+                                
                             Picker("\(inputTime)", selection: $inputTime) {
                                 ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
                                       //  .foregroundColor(.yellow)
+                                        
                                       
-                                } .foregroundColor(.green)
+                                }
+                                //.foregroundColor(.green)
                                 
                             }.pickerStyle(.menu)
                                 .foregroundColor(.white)
                                 .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                
                         }
+                        .frame(width: UIScreen.main.bounds.width / 5)
                     }
-                    HStack {
+                  
+                
+                
+                    HStack() {
                         VStack{
                             Text(inhaleTextMin)
                                 .font(.footnote)
                             
                             ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.yellow)
-                                    .grayscale(2)
-                                    .frame(width: 70, height: 70)
+                        
+                                
+                               Image("circle2pdf")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                Image("elipsePDF")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+            
                                 Picker( "\(inhale)", selection: $inhale) {
                                     
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
+                                            
                                     }
                                 }.pickerStyle(.menu)
                                     .foregroundColor(.white)
 
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                                    .frame(width: 70, height: 70)
+                                   // .padding(15)
+                                   // .frame(width: 60, height: 60)
                             }
+                           
                         }
                         
                         VStack{
                             Text(holdTextMin)
                                 .font(.footnote)
                             ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.yellow)
-                                    .grayscale(2)
-                                    .frame(width: 70, height: 70)
+                                Image("circle2pdf")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                Image("elipsePDF")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                  
                                 Picker("\(hold1)", selection: $hold1) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
+                                           // .foregroundColor(.white)
                                         
                                     }
                                 }.pickerStyle(.menu)
                                     .foregroundColor(.white)
 
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                  //  .frame(width: 70, height: 70)
+                                   // .frame(width: 60, height: 60)
                             }
                         }
                         
@@ -137,10 +170,14 @@ struct StartPageView: View {
                             Text(exhaleTextMin)
                                 .font(.footnote)
                             ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.yellow)
-                                    .grayscale(2)
-                                    .frame(width: 70, height: 70)
+                                Image("circle2pdf")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                Image("elipsePDF")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                         
                                 Picker("\(exhale)", selection: $exhale) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
@@ -150,6 +187,8 @@ struct StartPageView: View {
                                     .foregroundColor(.white)
 
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                  //  .frame(width: 70, height: 70)
+                                 //   .frame(width: 60, height: 60)
                             }
                         }
                         
@@ -158,10 +197,14 @@ struct StartPageView: View {
                             Text(holdTextMin)
                                 .font(.footnote)
                             ZStack {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.yellow)
-                                    .grayscale(2)
-                                    .frame(width: 70, height: 70)
+                                Image("circle2pdf")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                Image("elipsePDF")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                          
                                 Picker("\(hold2)", selection: $hold2) {
                                     ForEach(0...100, id: \.self) { number in
                                         Text("\(number)")
@@ -171,10 +214,14 @@ struct StartPageView: View {
                                     .foregroundColor(.white)
 
                                     .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                 //   .frame(width: 70, height: 70)
+                                  //  .frame(width: 60, height: 60)
                             }
                         }
                     }
-                    .padding(.vertical, 15)
+                    .frame(width: UIScreen.main.bounds.width / 1.1)
+                    .padding()
+                   // .padding(.vertical, 15)
                     
                     
                     HStack {
@@ -185,19 +232,28 @@ struct StartPageView: View {
                             }
                         }){
                             HStack {
+                                ZStack {
+                                    Image("buttonPDF")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    
                                 Text(startBreath)
                                     .fontWeight(.semibold)
                                     .font(.title)
+                                    .foregroundColor(.white)
                             }
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.green)
-                            .clipShape(Capsule())
-                            .padding(.vertical, 12)
-                            .cornerRadius(8)
-                            .frame(width: UIScreen.main.bounds.width / 2)
-                            .grayscale(2)
-                            .shadow(color: .gray, radius: 4, x: 0, y: 4)
+//.padding()
+                                .frame(width: UIScreen.main.bounds.width / 1.5)
+                            }
+//                            .padding()
+//                            .foregroundColor(.white)
+//                            .background(Color.green)
+//                            .clipShape(Capsule())
+//                            .padding(.vertical, 12)
+//                            .cornerRadius(8)
+//                            .frame(width: UIScreen.main.bounds.width / 2)
+//                            .grayscale(2)
+//                            .shadow(color: .gray, radius: 4, x: 0, y: 4)
                             
                         }
                         .alert(isPresented: $stateObject.showAlert, content: {
@@ -206,7 +262,7 @@ struct StartPageView: View {
                                   dismissButton: .default(Text(okText), action: {}))
                         })
                     }
-                }
+               // }
             }
         
     }
