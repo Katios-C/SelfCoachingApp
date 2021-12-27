@@ -12,115 +12,110 @@ struct StartPageView: View {
     @AppStorage(hold2UD) var  hold2 = 0
     @AppStorage(inputTimeUI) var inputTime = 0
     
+    @State var screen:CGFloat = 0
+    
+ 
+    
+    //let screen13Mini = 812.0
+
+    
     
     var body: some View {
-      
+       
         ZStack {
-            Image("fon_color")
+            Image("fon3")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .opacity(0.7)
+               // .opacity(0.7)
                 .ignoresSafeArea()
-
-            
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//.scaleEffect(x: 1.01, y: 1.01, anchor: .center)
+//               .offset(x: -15)
+              //  .offset(x: UIScreen.main.bounds.width * -0.01 , y: 0)
+                //* -0.025
           
-         
-        
-        
-         
+
+           
             VStack {
-                VStack {
+              
                     HStack {
-                       // Spacer()
-                        ZStack {
-
-                            
-//                            RoundedRectangle(cornerRadius: 20)
-//                                .fill(Color.yellow)
-//                                .grayscale(2)
-//                                .frame(width: 35, height: 35)
-                            Image("infopdf")
-                                .font(.title2)
-                               // .foregroundColor(.white)
-                                .onTapGesture {
-                                    navigation.push(PersonDetalsView())
-                                }
-                        }
-                        .offset(x: 165, y: -5)
-                        .padding(5)
-                      
-                    }
-                       
-                        .padding(10)
+                        
+                        Spacer()
+                        Image("infopdf")
+                            .font(.title2)
+                            .padding()
+                            .onTapGesture {
+                                navigation.push(PersonDetalsView())
+                            }
+//                            .offset(x: UIScreen.main.bounds.width * -0.02, y:  UIScreen.main.bounds.height * 0.05  )
+                    }.padding(.top, 25)
+//                    .padding(.vertical,  UIScreen.main.bounds.width / 4.5)
+//                    .padding(.horizontal, 20)
+                    
                  
-                   
-                }
-              //  .border(.red)
                 Spacer()
-                VStack {
 
-                Image("girl4")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .opacity(0.6)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .padding(15)
-
-
-
-                }
-              //  Spacer()
-              //  VStack {
                     VStack {
-                        Text(trainTimeText)
-                            .font(.footnote)
+                        Image("trainTimePDF")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 2.5)
+                            .padding(5)
                         ZStack {
                             
-//                            RoundedRectangle(cornerRadius: 20)
-//                                .fill(Color.yellow)
-//                                .grayscale(2)
-//                                .frame(width: 70, height: 70)
-                            Image("circle2pdf")
+
+                            Image("elipsePDF")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                               // .opacity(0.7)
-                              //  .frame(width: 90, height: 90)
+                           
                                 
                                 
                             Picker("\(inputTime)", selection: $inputTime) {
                                 ForEach(0...100, id: \.self) { number in
                                     Text("\(number)")
-                                      //  .foregroundColor(.yellow)
+                                    
                                         
                                       
                                 }
                                 //.foregroundColor(.green)
                                 
                             }.pickerStyle(.menu)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .shadow(color: .gray, radius: 4, x: 0, y: 4)
                                 
                         }
-                        .frame(width: UIScreen.main.bounds.width / 5)
+                        .frame(width: UIScreen.main.bounds.width / 3)
+                        .onAppear{
+                            print(UIScreen.main.bounds.width)
+                            print(UIScreen.main.bounds.height)
+                        }
+                        
                     }
-                  
-                
+                    .offset(x: 0, y: UIScreen.main.bounds.height * stateObject.adjust(screen: UIScreen.main.bounds.height) )
+                //y: UIScreen.main.bounds.height * -0.21
+                  //geometry.size.height * -0.333
+               // Spacer()
                 
                     HStack() {
                         VStack{
-                            Text(inhaleTextMin)
-                                .font(.footnote)
-                            
+//                            Text(inhaleTextMin)
+//                                .font(.footnote)
+                            Image("inhalePDF")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 10)
+                              
+//
                             ZStack {
                         
                                 
                                Image("circle2pdf")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                
-                                Image("elipsePDF")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+//
+//                                Image("elipsePDF")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
             
                                 Picker( "\(inhale)", selection: $inhale) {
                                     
@@ -139,16 +134,21 @@ struct StartPageView: View {
                         }
                         
                         VStack{
-                            Text(holdTextMin)
-                                .font(.footnote)
+//                            Text(holdTextMin)
+//                                .font(.footnote)
+                            Image("holdPDF")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 5)
+                              
                             ZStack {
                                 Image("circle2pdf")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                
-                                Image("elipsePDF")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+//
+//                                Image("elipsePDF")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
                                   
                                 Picker("\(hold1)", selection: $hold1) {
                                     ForEach(0...100, id: \.self) { number in
@@ -159,7 +159,7 @@ struct StartPageView: View {
                                 }.pickerStyle(.menu)
                                     .foregroundColor(.white)
 
-                                    .shadow(color: .gray, radius: 4, x: 0, y: 4)
+                                    .shadow(color: .gray, radius: 4, x: 0, y: 5)
                                   //  .frame(width: 70, height: 70)
                                    // .frame(width: 60, height: 60)
                             }
@@ -167,16 +167,19 @@ struct StartPageView: View {
                         
                         
                         VStack{
-                            Text(exhaleTextMin)
-                                .font(.footnote)
+                            Image("exhalePDF")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 8)
+                               
                             ZStack {
                                 Image("circle2pdf")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                 
-                                Image("elipsePDF")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+//                                Image("elipsePDF")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
                          
                                 Picker("\(exhale)", selection: $exhale) {
                                     ForEach(0...100, id: \.self) { number in
@@ -194,16 +197,19 @@ struct StartPageView: View {
                         
                         
                         VStack{
-                            Text(holdTextMin)
-                                .font(.footnote)
+                            Image("holdPDF")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 5)
+                              
                             ZStack {
                                 Image("circle2pdf")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                 
-                                Image("elipsePDF")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+//                                Image("elipsePDF")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
                           
                                 Picker("\(hold2)", selection: $hold2) {
                                     ForEach(0...100, id: \.self) { number in
@@ -236,11 +242,17 @@ struct StartPageView: View {
                                     Image("buttonPDF")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .overlay(
+                                        Image("BreathPDF")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: UIScreen.main.bounds.width / 3.5)
+                                        )
                                     
-                                Text(startBreath)
-                                    .fontWeight(.semibold)
-                                    .font(.title)
-                                    .foregroundColor(.white)
+//                                Text(startBreath)
+//                                    .fontWeight(.semibold)
+//                                    .font(.title)
+//                                    .foregroundColor(.white)
                             }
 //.padding()
                                 .frame(width: UIScreen.main.bounds.width / 1.5)
@@ -262,10 +274,14 @@ struct StartPageView: View {
                                   dismissButton: .default(Text(okText), action: {}))
                         })
                     }
+                    .padding(.bottom, 30)
                // }
             }
         
     }
     }
+    
+    
+
 }
 

@@ -19,11 +19,11 @@ struct FourCircleView: View {
         
         ZStack {
             
-            Image("fon_color")
+            Image("fon1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .opacity(0.7)
                 .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         
         VStack {
             HStack {
@@ -32,29 +32,20 @@ struct FourCircleView: View {
                 }, label: {
                     Image("arrowpdf")
                         .font(.title2)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-                    
-//                    Text(back)
-//                        .fontWeight(.semibold)
-//                        .foregroundColor(.white)
-//                        .padding(.vertical, 12)
-//                        .frame(width: UIScreen.main.bounds.width / 4)
-//                        .background(Color.green)
-//                        .clipShape(Capsule())
-//                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-//                        .grayscale(2)
+
                 })
-//                    .padding(.horizontal, 30)
-                    .offset(x: -120, y: 0)
+                    .padding()
+
+                   // .offset(x: -120, y: 0)
                    
-              //  Spacer()
+                Spacer()
                 
-                HStack(spacing: 10) {
+                
               
 Image("metronomPDF")
                         .font(.title2)
                         .foregroundColor(.white)
+                       // .padding()
                       //  .opacity(0.5)
                         
 
@@ -65,34 +56,37 @@ Image("metronomPDF")
                         .onTapGesture {
                             navigation.push(PersonDetalsView())
                         }
-                    
-//                    MetronomView(stateObject: stateObject)
-//                       // .padding(.horizontal, 30)
-//                        .offset(x: 65, y: 0)
-                
-            
+                        .padding()
+         
               
-            }
-                .offset(x: 130, y: 0)
-                .padding(10)
-            }
+            
+            
+//                .offset(x: UIScreen.main.bounds.width * -0.0000005, y:  UIScreen.main.bounds.height * 0.05  )
+               // .padding(10)
+            }.padding(.top, 10)
            
-           // .padding()
-           // .border(.red)
-            
-            Spacer()
-            
-            VStack {
-            Image("man2")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .opacity(0.6)
-                .frame(width: 400, height: 400)
-               // .edgesIgnoringSafeArea(.bottom)
-//.padding(15)
-            }
+        
+                   
 
             Spacer()
+            ZStack {
+                
+            Image("elipsePDF")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                
+                Text("\(stateObject.timeString())")
+                    .padding(20)
+            }
+            .frame(width: UIScreen.main.bounds.width / 3)
+            .offset(x: 0, y: UIScreen.main.bounds.height * stateObject.adjust2screen(screen: UIScreen.main.bounds.height) )
+            
+//            .offset(x: 0, y: UIScreen.main.bounds.height * adjust() )
+            
+            
+            
+            
+            VStack {
             HStack(alignment:.center, spacing: 20) {
                 VStack {
                     Text(inhaleText)
@@ -166,33 +160,28 @@ Image("metronomPDF")
             }
             //here
             .frame(width: UIScreen.main.bounds.width / 1.1)
-            Spacer()
+           // Spacer()
             VStack {
                 
-                Text("\(stateObject.timeString())")
-                    .padding(20)
-                
+               
+                ZStack {
+                  
                 Image("buttonPDF")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .opacity(stateObject.totaltime > 0 ? 0 : 1)
+                    .opacity(stateObject.totaltime > 0 ? 1 : 1)
                     .animation(.easeInOut(duration: 3))
-                
-//                HStack {
-//                    Text(repeatText)
-//                        .fontWeight(.semibold)
-//                }
-//                .padding()
-//                .foregroundColor(.white)
-//                .background(Color.green)
-//                .clipShape(Capsule())
-//                .padding(.vertical, 12)
-//                .cornerRadius(8)
-//                .frame(width: UIScreen.main.bounds.width / 2)
-//                .grayscale(2)
-//                .shadow(color: .gray, radius: 4, x: 0, y: 4)
-//                .opacity(stateObject.totaltime > 0 ? 0 : 1)
-//                .animation(.easeInOut(duration: 3))
+                    .overlay(
+                    Image("repeatPDF")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width / 2.7)
+                    )
+                       
+                }
+                .frame(width: UIScreen.main.bounds.width / 1.5)
+            
+
                 .onTapGesture {
                     stateObject.restartTime()
                     
@@ -206,8 +195,10 @@ Image("metronomPDF")
                    // AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {   }
                 }
             }
+            .padding(.bottom, 30)
         }
-        
+        }
+       // .padding(.top, 25)
         .onAppear{
             stateObject.start()
             stateObject.incrementIntInhale()
