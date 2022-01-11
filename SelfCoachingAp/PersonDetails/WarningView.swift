@@ -5,28 +5,49 @@ struct WarningView: View {
     
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    var body: some View {VStack {
-        HStack {
-            Button(action: {
-                navigation.pop(to: .previous)
-            }, label: {
-                Text(back)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.vertical, 12)
-                    .frame(width: UIScreen.main.bounds.width / 4)
-                    .background(Color.green)
-                    .clipShape(Capsule())
-                    .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                    .grayscale(2)
-            }).padding(4)
-            Spacer()
+    var body: some View {
+        ZStack {
+            Image(fon_2)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            VStack {
+                HStack {
+                    Button(action: {
+                        navigation.pop(to: .previous)
+                    }, label: {
+                        Image(back)
+                            .font(.title2)
+                    })
+                        .padding()
+                    Spacer()
+                }
+                .padding(.top, 20)
+                
+                Spacer()
+            }
+            VStack{
+                Spacer()
+                
+                Image(heartIcon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 14)
+                
+                Image(warning)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 2.2)
+                    .padding(20)
+                
+                Text(warningViewText)
+                    .font(Font.custom(MazzardMFont, size: 20))
+                    .foregroundColor(Color(UIColor(red: 90 / 255, green: 68 / 255, blue: 130 / 255, alpha: 1)))
+                    .lineSpacing(5)
+                    .padding(20)
+                Spacer()
+            }
         }
-        Spacer()
-    }
-        Text(warningViewText)
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 10).strokeBorder(Color.green, lineWidth: 2).grayscale(2))
     }
 }

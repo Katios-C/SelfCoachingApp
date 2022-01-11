@@ -7,93 +7,80 @@ struct PersonDetalsView: View {
     
     var body: some View {
         ZStack {
-            Image("fon_color")
+            Image(fon_1)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-               // .opacity(0.2)
-                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             
             VStack {
                 HStack {
                     Button(action: {
                         navigation.pop(to: .previous)
                     }, label: {
-                        Text(back)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 12)
-                            .frame(width: UIScreen.main.bounds.width / 4)
-                            .background(Color.green)
-                            .clipShape(Capsule())
-                            .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                            .grayscale(2)
-                    }).padding()
+                        Image(back)
+                            .font(.title2)
+                    })
+                        .padding()
                     Spacer()
                 }
+                .padding(.top, 20)
                 
                 Spacer()
                 
-                Button(action: {
-                    navigation.push(AboutTimerView())
-                }, label: {
-                    Text(aboutTimer)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.3)
-                        .background(Color.yellow)
-                        .grayscale(2)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                    
-                }).padding()
+                Image(rectangle_1)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 1.2)
+                    .overlay(
+                        Image(breathScheme)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 1.9)
+                    ).onTapGesture {
+                        navigation.push(BreathScemeView())
+                    }
+                
+                Image(rectangle_2)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 1.2)
+                    .overlay(
+                        Image(about)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 3)
+                    ).onTapGesture {
+                        navigation.push(AboutTimerViewPage())
+                    }
                 
                 
-                Button(action: {
-                    navigation.push(BreathScemeView())
-                }, label: {
-                    Text(breathScheme)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.3)
-                        .background(Color.yellow)
-                        .grayscale(2)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                    
-                }).padding()
+                Image(rectangle_2)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 1.2)
+                    .overlay(
+                        Image(warning)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 2.2)
+                    ).onTapGesture {
+                        navigation.push(WarningView())
+                    }
                 
                 
-                Button(action: {
-                    navigation.push(WarningView())
-                }, label: {
-                    Text(warning)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.3)
-                        .background(Color.yellow)
-                        .grayscale(2)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                    
-                }).padding()
-                
-                Button(action: {
-                    navigation.push(AboutMeView())
-                }, label: {
-                    Text(aboutDeveloper)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.3)
-                        .background(Color.yellow)
-                        .grayscale(2)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                    
-                }).padding()
+                Image(rectangle_2)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width / 1.2)
+                    .overlay(
+                        Image(aboutDeveloper)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 3)
+                    ).onTapGesture {
+                        navigation.push(AboutMeView())
+                    }
                 Spacer()
                 
             }

@@ -11,21 +11,28 @@
 		950F139A2713F85F00E82A8A /* StartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F13992713F85E00E82A8A /* StartPageView.swift */; };
 		950F609E274502020009726F /* FourCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F609D274502020009726F /* FourCircleView.swift */; };
 		951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */; };
+		9514B837278C16CF005C2F81 /* MazzardM-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9514B836278C1671005C2F81 /* MazzardM-Light.ttf */; };
+		9514B839278C1AF0005C2F81 /* MazzardM-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9514B838278C1AEB005C2F81 /* MazzardM-ExtraLight.ttf */; };
+		9514B83B278C1C68005C2F81 /* MazzardL-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9514B83A278C1C66005C2F81 /* MazzardL-Thin.ttf */; };
+		9514B83D278C1CA7005C2F81 /* MazzardM-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9514B83C278C1CA1005C2F81 /* MazzardM-Thin.ttf */; };
+		9514B83F278C1E14005C2F81 /* MazzardSoftM-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9514B83E278C1E14005C2F81 /* MazzardSoftM-Light.ttf */; };
+		9514B841278D41BB005C2F81 /* AboutTimerViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514B840278D41BB005C2F81 /* AboutTimerViewPage.swift */; };
 		951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */; };
 		951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0126D3866B004A5F46 /* Assets.xcassets */; };
 		951A1F0526D3866B004A5F46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951A1F0426D3866B004A5F46 /* Preview Assets.xcassets */; };
 		951A1F4826D503C7004A5F46 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 951A1F4726D503C7004A5F46 /* iOSDevPackage */; };
 		9535FB9A26F0BAE20026C5DE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9535FB9926F0BAE20026C5DE /* Resolver */; };
+		953A32EA278977F1002FFD4D /* RelaxBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A32E9278977F1002FFD4D /* RelaxBreathView.swift */; };
+		953A32EC27898404002FFD4D /* BalanceBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A32EB27898404002FFD4D /* BalanceBreathView.swift */; };
+		953A32EE27898B55002FFD4D /* EnergyBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A32ED27898B55002FFD4D /* EnergyBreathView.swift */; };
 		953A5B6227573FC5003E0A1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A5B6127573FC5003E0A1C /* Constants.swift */; };
 		9584D9F1272F9C1700012A07 /* MetronomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584D9F0272F9C1700012A07 /* MetronomView.swift */; };
 		9584D9F3272F9E4800012A07 /* tiktak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9584D9F2272F9E4800012A07 /* tiktak.mp3 */; };
 		95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */; };
 		95E91D26273A3DF400928460 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D25273A3DF400928460 /* ServiceLocator.swift */; };
-		95E91D2C273CFFD500928460 /* AboutTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D2B273CFFD500928460 /* AboutTimerView.swift */; };
 		95E91D2E273D020E00928460 /* BreathScemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D2D273D020E00928460 /* BreathScemeView.swift */; };
 		95E91D30273D031200928460 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D2F273D031200928460 /* WarningView.swift */; };
 		95E91D32273D044E00928460 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D31273D044E00928460 /* AboutMeView.swift */; };
-		95E91D34273E124F00928460 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E91D33273E124F00928460 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,22 +40,29 @@
 		950F13992713F85E00E82A8A /* StartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageView.swift; sourceTree = "<group>"; };
 		950F609D274502020009726F /* FourCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCircleView.swift; sourceTree = "<group>"; };
 		951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetalsView.swift; sourceTree = "<group>"; };
+		9514B836278C1671005C2F81 /* MazzardM-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardM-Light.ttf"; sourceTree = "<group>"; };
+		9514B838278C1AEB005C2F81 /* MazzardM-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardM-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9514B83A278C1C66005C2F81 /* MazzardL-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardL-Thin.ttf"; sourceTree = "<group>"; };
+		9514B83C278C1CA1005C2F81 /* MazzardM-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardM-Thin.ttf"; sourceTree = "<group>"; };
+		9514B83E278C1E14005C2F81 /* MazzardSoftM-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardSoftM-Light.ttf"; sourceTree = "<group>"; };
+		9514B840278D41BB005C2F81 /* AboutTimerViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTimerViewPage.swift; sourceTree = "<group>"; };
 		951A1EFA26D38669004A5F46 /* SelfCoachingAp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfCoachingAp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951A1EFD26D38669004A5F46 /* SelfCoachingApApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCoachingApApp.swift; sourceTree = "<group>"; };
 		951A1F0126D3866B004A5F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951A1F0426D3866B004A5F46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		951A1F0626D3866B004A5F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelfCoachingAp.entitlements; sourceTree = "<group>"; };
+		953A32E9278977F1002FFD4D /* RelaxBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxBreathView.swift; sourceTree = "<group>"; };
+		953A32EB27898404002FFD4D /* BalanceBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBreathView.swift; sourceTree = "<group>"; };
+		953A32ED27898B55002FFD4D /* EnergyBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBreathView.swift; sourceTree = "<group>"; };
 		953A5B6127573FC5003E0A1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9584D9F0272F9C1700012A07 /* MetronomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomView.swift; sourceTree = "<group>"; };
 		9584D9F2272F9E4800012A07 /* tiktak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiktak.mp3; sourceTree = "<group>"; };
 		95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95E91D25273A3DF400928460 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		95E91D2B273CFFD500928460 /* AboutTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTimerView.swift; sourceTree = "<group>"; };
 		95E91D2D273D020E00928460 /* BreathScemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathScemeView.swift; sourceTree = "<group>"; };
 		95E91D2F273D031200928460 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		95E91D31273D044E00928460 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
-		95E91D33273E124F00928460 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +92,27 @@
 			isa = PBXGroup;
 			children = (
 				951084BB26D78ECB0092BA5B /* PersonDetalsView.swift */,
-				95E91D2B273CFFD500928460 /* AboutTimerView.swift */,
-				95E91D33273E124F00928460 /* TextView.swift */,
+				953A32E9278977F1002FFD4D /* RelaxBreathView.swift */,
+				953A32EB27898404002FFD4D /* BalanceBreathView.swift */,
 				95E91D2F273D031200928460 /* WarningView.swift */,
 				95E91D2D273D020E00928460 /* BreathScemeView.swift */,
+				953A32ED27898B55002FFD4D /* EnergyBreathView.swift */,
 				95E91D31273D044E00928460 /* AboutMeView.swift */,
+				9514B840278D41BB005C2F81 /* AboutTimerViewPage.swift */,
 			);
 			path = PersonDetails;
+			sourceTree = "<group>";
+		};
+		9514B835278C1658005C2F81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9514B836278C1671005C2F81 /* MazzardM-Light.ttf */,
+				9514B838278C1AEB005C2F81 /* MazzardM-ExtraLight.ttf */,
+				9514B83A278C1C66005C2F81 /* MazzardL-Thin.ttf */,
+				9514B83C278C1CA1005C2F81 /* MazzardM-Thin.ttf */,
+				9514B83E278C1E14005C2F81 /* MazzardSoftM-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		951A1EF126D38669004A5F46 = {
@@ -107,6 +135,7 @@
 		951A1EFC26D38669004A5F46 /* SelfCoachingAp */ = {
 			isa = PBXGroup;
 			children = (
+				9514B835278C1658005C2F81 /* Fonts */,
 				951A1F4B26D51CFB004A5F46 /* SelfCoachingAp.entitlements */,
 				951A1F0626D3866B004A5F46 /* Info.plist */,
 				95B3097E26D61EB700B672D4 /* GoogleService-Info.plist */,
@@ -220,7 +249,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				951A1F0526D3866B004A5F46 /* Preview Assets.xcassets in Resources */,
+				9514B83F278C1E14005C2F81 /* MazzardSoftM-Light.ttf in Resources */,
+				9514B83B278C1C68005C2F81 /* MazzardL-Thin.ttf in Resources */,
 				951A1F0226D3866B004A5F46 /* Assets.xcassets in Resources */,
+				9514B83D278C1CA7005C2F81 /* MazzardM-Thin.ttf in Resources */,
+				9514B839278C1AF0005C2F81 /* MazzardM-ExtraLight.ttf in Resources */,
+				9514B837278C16CF005C2F81 /* MazzardM-Light.ttf in Resources */,
 				95B3097F26D61EB700B672D4 /* GoogleService-Info.plist in Resources */,
 				9584D9F3272F9E4800012A07 /* tiktak.mp3 in Resources */,
 			);
@@ -234,16 +268,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E91D26273A3DF400928460 /* ServiceLocator.swift in Sources */,
-				95E91D34273E124F00928460 /* TextView.swift in Sources */,
 				951084BC26D78ECB0092BA5B /* PersonDetalsView.swift in Sources */,
-				95E91D2C273CFFD500928460 /* AboutTimerView.swift in Sources */,
 				950D889E271EA0C10014F756 /* FourCirclesViewModel.swift in Sources */,
 				9584D9F1272F9C1700012A07 /* MetronomView.swift in Sources */,
 				95E91D32273D044E00928460 /* AboutMeView.swift in Sources */,
 				950F139A2713F85F00E82A8A /* StartPageView.swift in Sources */,
+				9514B841278D41BB005C2F81 /* AboutTimerViewPage.swift in Sources */,
 				950F609E274502020009726F /* FourCircleView.swift in Sources */,
 				95E91D2E273D020E00928460 /* BreathScemeView.swift in Sources */,
 				95E91D30273D031200928460 /* WarningView.swift in Sources */,
+				953A32EA278977F1002FFD4D /* RelaxBreathView.swift in Sources */,
+				953A32EE27898B55002FFD4D /* EnergyBreathView.swift in Sources */,
+				953A32EC27898404002FFD4D /* BalanceBreathView.swift in Sources */,
 				951A1EFE26D38669004A5F46 /* SelfCoachingApApp.swift in Sources */,
 				953A5B6227573FC5003E0A1C /* Constants.swift in Sources */,
 			);
