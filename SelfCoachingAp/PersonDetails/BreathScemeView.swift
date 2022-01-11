@@ -4,90 +4,77 @@ import iOSDevPackage
 struct BreathScemeView: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
-    @State var isText2 = false
-    @State var isText3 = false
-    @State var isText4 = false
-    
-    
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {
-                    navigation.pop(to: .previous)
-                }, label: {
-                    Text(back)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 4)
-                        .background(Color.green)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                        .grayscale(2)
-                }).padding(4)
-                Spacer()
-            }
-            ScrollView {
-                VStack {
-                    Text(breathScemeViewOne)
-                        .fontWeight(.semibold)
-                        .padding(4)
-                    
-                    
-                    Text(breathScemeViewTwo)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.5)
-                        .background(isText2 ? Color.gray : Color.yellow)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                        .grayscale(2)
-                    
-                        .onTapGesture {
-                            isText2.toggle()
-                        }
-                    
-                    isText2 ? InhaleTextView()
+        ZStack {
+            
+            Image(fon_4)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            
+            VStack {
+                HStack {
+                    Button(action: {
+                        navigation.pop(to: .previous)
+                    }, label: {
+                        Image(back)
+                            .font(.title2)
+                    })
                         .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
+                    Spacer()
+                }
+                .padding(.top, 20)
+                
+                Spacer()
+                
+                VStack {
+                    ZStack {
+                        Image(flowerRectangle_1)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width / 1.2)
+                            .overlay(
+                                Image(relaxTitle)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: UIScreen.main.bounds.width / 1.9)
+                            )
+                            .onTapGesture {
+                                navigation.push(RelaxBreathView())
+                            }
+                    }
                     
-                    
-                    Text(breathScemeViewThree)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 12)
-                        .frame(width: UIScreen.main.bounds.width / 1.5)
-                        .background(isText3 ? Color.gray : Color.yellow)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                        .grayscale(2)
+                    Image(flowerRectangle_2)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width / 1.2)
+                        .overlay(
+                            Image(balanceTitleText)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 3.5)
+                        )
                         .onTapGesture {
-                            isText3.toggle()
+                            navigation.push(BalanceBreathView())
                         }
-                    isText3 ? ExhaleTextView() .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
                     
-                    
-                    Text(breathScemeViewFour)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 15)
-                        .frame(width: UIScreen.main.bounds.width / 1.5)
-                        .background(isText4 ? Color.gray : Color.yellow)
-                        .clipShape(Capsule())
-                        .shadow(color: .gray, radius: 4, x: 0, y: 4)
-                        .grayscale(2)
+                    Image(flowerRectangle_3)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width / 1.2)
+                        .overlay(
+                            Image(energyTitle)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width / 2.8)
+                        )
                         .onTapGesture {
-                            isText4.toggle()
+                            navigation.push(EnergyBreathView())
                         }
-                    isText4 ? EqualBreathView() .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2).grayscale(2)) : nil
                 }
                 .padding()
+                Spacer()
             }
         }
     }

@@ -8,25 +8,21 @@ struct MetronomView: View {
         HStack {
             !isPlay  ?
             Button(action: {
-              
-                
-                    stateObject.audioPlayer.play()
+                stateObject.audioPlayer.play()
                 isPlay = true
             }) {
-                Image(systemName: metronomImageName).resizable()
-                    .frame(width: 20, height: 20)
+                Image(metronomImage).resizable()
+                    .frame(width: 20, height: 25)
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.gray)
             }
             :
             Button(action: {
                 stateObject.audioPlayer.pause()
                 isPlay = false
             }) {
-                Image(systemName: metronom).resizable()
-                    .frame(width: 20, height: 20)
+                Image(metronomeImage_2).resizable()
+                    .frame(width: 20, height: 25)
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.yellow)
             }
         }
         .onAppear {

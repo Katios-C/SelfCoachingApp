@@ -14,7 +14,13 @@ class FourCirclesViewModel: ObservableObject {
     @Published var inhaleEnds = false
     @Published var hold1Ends = false
     @Published var exhaleEnds = false
-    @Published var hold2Ends = false
+     var hold2Ends = false
+    
+    @Published var screen13Max = 926.0
+    @Published var screen12 = 844.0
+    @Published var screen11Pro = 812.0
+    @Published var screen8plus = 736.0
+    @Published var screen7_8 = 667.0
     
     private let queue = DispatchQueue.init(label: timerLabelText, qos: .background, attributes: [], autoreleaseFrequency: .never, target: .global())
     
@@ -191,6 +197,53 @@ class FourCirclesViewModel: ObservableObject {
         self.sourceTimer?.schedule(deadline: .now(),
                                    repeating: 1)
         self.sourceTimer?.resume()
+    }
+    
+    
+    func adjust(screen: CGFloat) -> Double {
+//        screen = UIScreen.main.bounds.width
+//        print("SCREEN")
+ //   print(screen)
+        switch screen {
+        case screen7_8:
+            return -0.21
+        case screen8plus:
+            return -0.22
+        case screen12:
+            return -0.27
+        case screen13Max:
+            return -0.28
+        case screen11Pro:
+            return -0.26
+       
+        default:
+            return -0.27
+            // 12, 13, 13Max
+        }
+    }
+    
+    func adjust2screen(screen: CGFloat) -> Double {
+//        screen = UIScreen.main.bounds.width
+//        print("SCREEN")
+ //   print(screen)
+        switch screen {
+        case screen7_8:
+            return -0.255
+        case screen8plus:
+            return -0.26
+        case screen12:
+            return -0.31
+        case screen13Max:
+            return -0.31
+        case screen11Pro:
+            return -0.31
+        case 896:
+            return -0.31
+      
+        default:
+            return -0.27
+            // 12, 13, 13Max
+        }
     }
 }
 
